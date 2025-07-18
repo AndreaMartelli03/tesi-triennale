@@ -1,0 +1,473 @@
+
+In questo capitolo dimostriamo il seguente:
+\begin{teo}[Lusternik-Fet, 1951]\label{teo: Lusternik-Fet}
+	Ogni varietà Riemanniana chiusa ammette una geodetica chiusa non costante. 
+\end{teo}
+La dimostrazione è adattata da \cite[Theorem~2.4.20]{klingenberg1995riemannian}. Un'altra dimostrazione, più elementare e che non utilizza esplicitamente il teorema di passo montano, può essere trovata in \cite[Theorem~A.1.5]{klingenberg2012lectures}.
+
+Grazie al Teorema~\ref{teo: punto critico energia se e solo se geodetica}, dimostrare l'esistenza di una geodetica chiusa non costante equivale a dimostrare l'esistenza di un punto critico non banale dell'energia in \(H^1(\Sp^1,M)\). La topologia di \(H^1(\Sp^1,M)\) è estremamente diversa nei seguenti due casi, che analizziamo nel dettaglio nelle prossime sezioni.
+\begin{enumerate}[label=(\arabic*)]
+	\item \(M\) non è semplicemente connessa, cioè il gruppo fondamentale di \(M\) non è banale: si riesce a \textit{minimizzare} l'energia nelle classi di omotopia libera di curve chiuse.
+	\item  \(M\) è semplicemente connessa, cioè il gruppo fondamentale di \(M\) è banale: non abbiamo una classe non banale su cui minimizzare. Utilizzando dei risultati sui gruppi di omotopia, ci riconduciamo a lavorare su una sfera e, con un argomento di passo montano, individuiamo un punto critico non banale. 
+\end{enumerate}
+
+\section{Caso non semplicemente connesso}\label{sez: non semplicemente connesso}
+
+Sia \((M,g)\) una varietà Riemanniana chiusa. Ricordiamo che abbiamo le seguenti inclusioni
+\[
+	C^\infty(\Sp^1,M) \hookrightarrow H^1(\Sp^1,M) \hookrightarrow C^0(\Sp^1,M).
+\]
+indotte da le analoghe in \(\R^N\).
+
+Un cammino in \(C^0(\Sp^1,M)\) è una mappa
+\begin{align*}
+	H: I &\to C^0(\Sp^1,M) \\
+	s &\mapsto H(s)
+\end{align*}
+che può essere identificata con l'omotopia continua tra le due curve chiuse \(H(0),H(1) \in C^0(\Sp^1,M)\) definita da
+\begin{align*}
+	\overline{H}: I \times \Sp^1 &\to M \\
+	(s,t) &\mapsto H(s)(t).
+\end{align*}
+Infatti vale
+\begin{lemma}\label{lemma: identificazione curve/omotopie}
+	Siano \(X\) e \(Y\) due spazi topologici compatti e sia \((Z,d)\) uno spazio metrico. Dotiamo \(C^0(X \times Y, Z)\), \(C^0(Y,Z)\) e \(C^0(X,C^0(Y,Z))\) delle distanze della convergenza uniforme, ovvero
+	\begin{align*}
+		& d_{C^0(X \times Y, Z)}(f,g) \coloneq \sup_{(x,y) \in X \times Y} d (f(x,y),g(x,y)) & f,g \in C^0(X \times Y, Z), \\
+		& d_{C^0(Y, Z)}(f,g) \coloneq \sup_{y \in Y} d(f(y),g(y)) & f,g \in C^0(Y, Z), \\
+		& d_{C^0(X,C^0(Y,Z))}(F,G) \coloneq \sup_{x \in X} d_{C^0(Y, Z)} (F(x),G(x)) & F,G \in C^0(X,C^0(Y, Z))
+	\end{align*}
+	rispettivamente. Allora la mappa 
+	\begin{align}\label{eq: omemom isometrico}
+		C^0(X \times Y,Z) &\to C^0(X,C^0(Y,Z))\\
+		h &\mapsto H \nonumber
+	\end{align}
+	definita da
+	\[
+		H(x)(y) \coloneq h(x,y)
+	\]
+	è ben definita ed è un omeomorfismo isometrico. 
+	
+	Inoltre, se \(X\), \(Y\) e \(Z\) sono varietà Riemanniane, allora per ogni \(h \in C^0(X \times Y, Z)\), 
+	\[
+		h \in C^\infty(X \times Y, Z) \quad \iff \quad \begin{cases}
+			H \in C^\infty(X,C^0(Y,Z))\\
+			H(x) \in C^\infty(Y,Z) \ \forall x \in X
+		\end{cases}
+	\]
+	ricordando che \(C^0(Y,Z)\) è una varietà di Banach (cf. Sezione~\ref{sez: var Banach/Hilbert}).
+\end{lemma}
+\begin{proof}
+	La mappa (\ref{eq: omemom isometrico}) è ben definita e un omeomorfismo per \cite[Proposition~A.13, Proposition~A.14, Proposition~A.16]{hatcher2000algebraic}. Per vedere che è un'isometria, consideriamo \(g,h \in C^0(X\times Y, Z)\) e le loro immagini \(G,H \in C^0(X,C^0(Y,Z))\):
+	\begin{align*}
+		d_{C^0(X,C^0(Y,Z))}(G,H) &= \sup_{x \in X} d_{C^0(Y, Z)} (G(x),H(x))\\
+		&= \sup_{x \in X} \sup_{y \in Y} d(G(x)(y),H(x)(y)) \\
+		&= \sup_{(x,y) \in Y} d (g(x,y),h(x,y)) \\
+		&= d_{C^0(X \times Y, Z)}(g,h).
+	\end{align*}
+	
+	Siano \(X\), \(Y\) e \(Z\) delle varietà Riemanniane, di dimensione \(n\), \(m\) e \(l\) rispettivamente. Osserviamo che in coordinate (senza rinominare le rappresentazioni locali), se sia \(h\) che \(H\) fossero differenziabili, allora
+	\begin{align}\label{eq: de_xh}
+		\dif H: \R^n \times \R^n &\to C^0(\R^m,\R^l) \times C^0(\R^m,\R^l) \nonumber \\
+		(x,v) & \mapsto (H(x), \de_x h(x, \cdot )[v]),
+	\end{align}
+	dove \(\de_x h(x,y): \R^n \to \R^l\) è la mappa lineare data dalla matrice \(l \times n\)
+	\[
+		\left( \frac{\de h(x,y)}{\de x^1}, \dots , \frac{\de h(x,y)}{\de x^n} \right).
+	\] 
+	Analogamente, 
+	\begin{equation}\label{eq: de_yh}
+		\dif (H(x))(y)[w] = \de_y h (x,y)[w],
+	\end{equation} 
+	dove \(\de_y h(x,y): \R^m \to \R^l\) è dato dalla matrice \(l \times m\)
+	\[
+	\left( \frac{\de h(x,y)}{\de y^1}, \dots , \frac{\de h(x,y)}{\de y^m} \right).
+	\]
+	In particolare, 
+	\begin{align}\label{eq: dh}
+		\dif h(x,y)[v,w] &= \de_xh(x,y)[v]+ \de_yh(x,y)[w] \nonumber\\
+		&= pr_2(\dif H(x)[v])(y) + \dif (H(x))(y)[w],
+	\end{align}
+	dove \(pr_2: C^0(\R^m,\R^l) \times C^0(\R^m,\R^l)\) è la proiezione sul secondo fattore.
+	
+	Supponiamo che \(H\) sia liscia e abbia valori in \(C^\infty(Y,Z)\). Allora \(h\) ha derivate parziali \(\de_xh(x,y)[v] = pr_2(\dif H(x)[v])(y)\) e \(\de_yh(x,y)[w] = \dif (H(x))(y)[w]\), e per il teorema del differenziale totale \(h\) è differenziabile, con differenziale definito dalla formula (\ref{eq: dh}). Siccome \(T(X \times Y) \equiv TX \times TY\), con lo stesso ragionamento otteniamo che anche \(\dif h : TX \times TY \to TZ\) è differenziabile, per cui \(h \in C^2(X \times Y, Z)\). Per induzione, otteniamo \(h \in C^\infty(X \times Y, Z)\). 
+	
+	Supponiamo che \(h\) sia liscia. Poiché \(\{x\} \times Y \equiv Y\) è una sottovarietà di \(X \times Y\), la restrizione \(h|_{\{x\} \times Y} = H(x) \in C^\infty(Y,Z)\), e quindi vale la (\ref{eq: de_yh}). Inoltre \(H\) risulta differenziabile definendo il differenziale con (\ref{eq: de_xh}). In maniera induttiva analoga a quanto fatto sopra per \(h\), otteniamo che \(H \in C^\infty(X,C^0(Y,Z))\).
+\end{proof}
+
+
+Dunque le componenti connesse di \(C^0(\Sp^1,M)\) sono le classi di omotopia di curve chiuse \(\Sp^1 \to M\). 
+
+Alla fine del XIX secolo, H. Poincaré e J. Hadamard cercavano di trovare un rappresentante geodetico per ogni classe di omotopia di curve chiuse. Nel 1898 J. Hadamard ha dimostrato l'asserto nel caso delle superfici compatte, sostanzialmente minimizzando la lunghezza \cite{hadamard1898surfaces}. Dimostriamo lo stesso risultato, ma con un linguaggio più moderno: utilizzeremo il metodo diretto del Calcolo delle Variazioni minimizzando il funzionale energia, quindi in primis occorre restringere il problema allo spazio \(H^1(\Sp^1,M)\).
+
+Siccome \( H^1(\Sp^1,M) \hookrightarrow C^0(\Sp^1,M)\) è continua, ogni componente connessa di \(H^1(\Sp^1,M)\) è contenuta in un'unica componente connessa di \(C^0(\Sp^1,M)\). Verifichiamo che le componenti connesse di \(H^1(\Sp^1,M)\) sono esattamente quelle di \(C^0(\Sp^1,M)\) intersecate con \(H^1(\Sp^1,M)\). 
+
+\begin{lemma}\label{lemma: omotopie lisce}
+	Siano \(\gamma_0, \gamma_1 \in C^\infty(\Sp^1,M)\) due curve chiuse omotope in \(C^0(\Sp^1,M)\). Allora l'omotopia può essere scelta di classe \(C^\infty\), e in particolare \(\gamma_0\) e \(\gamma_1\) sono connesse da un cammino \(\widetilde{H}:I \to C^\infty(\Sp^1,M) \subset C^0(\Sp^1,M)\).
+\end{lemma}
+\begin{proof}
+	Sia \(H: I \times \Sp^1 \to M\) un'omotopia tra \(\gamma_0\) e \(\gamma_1\). Possiamo estendere \(H\) a una mappa \(F: \R \times \Sp^1 \to M\) ponendo
+	\[
+		F(s,t) \coloneq \begin{cases}
+			H(s,t) & \text{ se } 0\leq s \leq 1 \\
+			\gamma_0(t) & \text{ se } s <0 \\
+			\gamma_1(t) &\text{ se }s>1.
+		\end{cases}
+	\]
+	Osserviamo che \(F\) è liscia sul chiuso \(A = (\R \setminus (0,1)) \times \Sp^1\). Per il Teorema~\ref{teo: approssimazione whitney}, \(F\) è omotopa relativamente ad \(A\) a una mappa liscia \(\widetilde{F}\). Allora \(\widetilde{H} \coloneq \widetilde{F}|_{I \times \Sp^1}\) è l'omotopia liscia voluta. 
+\end{proof}
+
+\begin{lemma}\label{lemma: le classi di omotopia sono aperte}
+	Per ogni \(\gamma\in H^1(\Sp^1,M)\), l'aperto (cf. Osservazione~\ref{oss: H1 varietà di Hilbert})
+	\[
+		\mathcal{U}(\gamma) \coloneq \exp_\gamma(\mathcal{B}(\gamma)) = \left\{\exp_\gamma(X) \in H^1(\Sp^1,M) \ \middle| \ 
+		\begin{aligned}
+			&X \in T_{\gamma}H^1(\Sp^1,M), \\
+			&|X(t)|_{\gamma(t)} < \ve_\gamma \; \forall t \in \Sp^1
+		\end{aligned}
+		\right\},
+	\]
+	è contenuto nella classe di omotopia di \(\gamma\) in \(H^1(\Sp^1,M)\). In particolare, se \([\gamma]\) è la classe di omotopia di \(\gamma\) in \(C^0(\Sp^1,M)\), allora \([\gamma] \cap H^1(\Sp^1,M)\) è aperto in \(H^1(\Sp^1,M)\). 
+\end{lemma}
+\begin{proof}
+	Sia \(\widetilde{\gamma}= \exp_\gamma(W) \in \mathcal{U}(\gamma)\). Un'omotopia in \(H^1(\Sp^1,M)\) tra \(\gamma\) e \(\widetilde{\gamma}\) è 
+	\begin{align}\label{eq: cammino in H^1}
+		I \times \Sp^1 &\to M \nonumber \\
+		(s,t) &\mapsto \exp_{\gamma(t)}(sW_t). 
+	\end{align}
+\end{proof}
+
+Siano \(\gamma_0,\gamma_1 \in H^1(\Sp^1,M)\) due curve chiuse omotope in \(C^0(\Sp^1,M)\). Grazie alla Proposizione~\ref{prop: approssimazione con curve lisce}, esistono due curve lisce \(\widetilde{\gamma}_0 \in \mathcal{U}(\gamma_0)\) e \(\widetilde{\gamma}_1 \in \mathcal{U}(\gamma_1)\) che per il Lemma~\ref{lemma: le classi di omotopia sono aperte} sono omotope in \(H^1(\Sp^1,M)\) a \(\gamma_0\) e \(\gamma_1\) rispettivamente. Per il Lemma~\ref{lemma: omotopie lisce}, esiste un'omotopia liscia \(\widetilde{H}\) tra \(\widetilde{\gamma}_0\) e \(\widetilde{\gamma}_1\). In particolare \(\widetilde{H}\) è un cammino in \(C^\infty(\Sp^1,M) \subset H^1(\Sp^1,M)\) che connette \(\widetilde{\gamma}_0\) a \(\widetilde{\gamma}_1\). Siano \(H_0\) e \(H_1\) i cammini definiti da (\ref{eq: cammino in H^1}) relativi a \(\gamma_0\) e \(\widetilde{\gamma}_0\) e a \(\gamma_1\) e \(\widetilde{\gamma}_1\) rispettivamente. Allora il cammino \(H:I \to H^1(\Sp^1,M)\) definito da 
+\[
+	H(s) \coloneq \begin{cases}
+		H_0(3s) & \text{ se } 0 \leq s \leq 1/3 \\
+		\widetilde{H}(3s-1) &\text{ se } 1/3 \leq s \leq 2/3 \\
+		H_1(3-3s) & \text{ se } 2/3 \leq s \leq 1
+	\end{cases}
+\]
+connette \(\gamma_0\) a \(\gamma_1\). Abbiamo dimostrato la seguente:
+\begin{prop}
+	Le componenti connesse di \(H^1(\Sp^1,M)\) sono ottenute intersecando quelle di \(C^0(\Sp^1,M)\) con \(H^1(\Sp^1,M)\), cioè, se \(\gamma \in \Gamma \subset H^1(\Sp^1,M)\), allora 
+	\[
+		\Gamma = [\gamma] \cap H^1(\Sp^1,M),
+	\]
+	dove \([\gamma]\) è la classe di omotopia di \(\gamma\) in \(C^0(\Sp^1,M)\).
+\end{prop}
+
+Se \(M\) non è semplicemente connessa, sicuramente ci sono almeno due componenti connesse di \(C^0(\Sp^1,M)\). Infatti, denotando con \(\pi_0(C^0(\Sp^1,M))\) la famiglia delle classi di omotopia di curve chiuse (o delle componenti connesse di \(C^0(\Sp^1,M)\)), l'azione per coniugio di \(\pi_1(M,p)\) su se stesso e la mappa naturale \(\pi_1(M,p) \to \pi_0(C^0(\Sp^1,M))\) inducono una biezione tra l'insieme delle classi di coniugio di \(\pi_1(M,p)\) e \(\pi_0(C^0(\Sp^1,M))\) (cf. \cite[Proposition~4A.2]{hatcher2000algebraic}). Siccome solo il gruppo banale ha un'unica classe di coniugio, se \(M\) non è semplicemente connessa c'è almeno una componente connessa di \(C^0(\Sp^1,M)\) non banale, cioè che non contiene curve costanti.
+
+\begin{teo}[Hadamard, 1898]\label{teo: minimizzazione energia}
+	Sia \((M,g)\) chiusa e non semplicemente connessa. Sia \(\Gamma \subset H^1(\Sp^1,M)\) una componente connessa non banale. Allora esiste una geodetica \(\gamma \in \Gamma\), che corrisponde a un punto di minimo dell'energia in \(\Gamma\).
+\end{teo}
+\begin{proof}
+	Assumiamo che \(M \subset \R^N\), con la metrica indotta da quella piatta di \(\R^N\). Abbiamo le seguenti inclusioni:
+	\begin{align*}
+		&C^0(\Sp^1,M) \subset C^0(\Sp^1, \R^N) \quad \text{ chiuso},  \\
+		&H^1(\Sp^1,M) \subset H^1(\Sp^1, \R^N) \quad \text{ chiuso}.
+	\end{align*}
+	Inoltre l'energia è estesa ad \(H^1(\Sp^1,\R^N)\) da
+	\[
+		\widetilde{E}(u) \coloneq \frac{1}{2} \|\dot u\|^2_{L^2} \qquad u \in H^1(\Sp^1, \R^N)
+	\]
+	che è debolmente semicontinua dal basso. 
+	
+	Usiamo la strategia del metodo diretto del Calcolo delle Variazioni per minimizzare l'energia. Poniamo
+	\[
+		\lambda \coloneq \inf_\Gamma E
+	\]
+	e consideriamo una successione minimizzante \((\gamma_h)_h \subset \Gamma\), cioè tale che
+	\[
+		E(\gamma_h) \to \lambda.
+	\]
+	Siccome \(M \subset \R^N\) è compatta, è anche limitata. Allora esiste \(c>0\) tale che 
+	\[
+		\|\gamma_h(t) \|_{\R^N}^2 \leq c \qquad \forall t \in \Sp^1, \ h \in \N
+	\]
+	e quindi
+	\[
+		\|\gamma_h\|_{L^2} \leq \|\gamma_h\|_{C^0} \leq c \qquad \forall h \in \N.
+	\]
+	Inoltre anche la successione
+	\[
+		\|\dot \gamma_h \|_{L^2} = \sqrt{2E(\gamma_h)}
+	\]
+	è limitata perché convergente. Per il Teorema~\ref{teo: immersione Sobolev per S^1}, esiste \(\gamma \in H^1(\Sp^1,\R^N)\) tale che, a meno di estrarre una sottosuccessione,
+	\begin{itemize}
+		\item \(\gamma_h \rightharpoonup \gamma\) in \(H^1(\Sp^1,\R^N)\),
+		\item \(\gamma_h \to \gamma \) in \(C^0(\Sp^1,\R^N)\).
+	\end{itemize}
+	Per la semicontinuità di \(\widetilde{E}\), 
+	\[
+		\widetilde{E}(\gamma) = \lambda.
+	\]
+	Sia \(\overline{\Gamma}\) la componente connessa di \(C^0(\Sp^1,M)\) tale che \(\Gamma= \overline{\Gamma} \cap H^1(\Sp^1,M)\). Osserviamo che la seguente è una catena di chiusi:
+	\[
+		\overline{\Gamma} \subset C^0(\Sp^1,M) \subset C^0(\Sp^1,\R^N)
+	\]
+	e quindi in realtà \(\gamma \in \Gamma\). Dunque \(\gamma\) è un punto di minimo per l'energia in \(\Gamma\). Per il Lemma~\ref{lemma: le classi di omotopia sono aperte}, \(\Gamma\) è aperta in \(H^1(\Sp^1,M)\), e quindi \(\gamma\) è un punto di minimo locale per l'energia, e in particolare è un punto critico. Per il Teorema~\ref{teo: punto critico energia se e solo se geodetica}, \(\gamma\) è una geodetica. 
+\end{proof}
+
+
+\section{Caso semplicemente connesso}\label{sez: semplicemente connesso}
+
+Se \(M\) è semplicemente connessa, il Teorema~\ref{teo: minimizzazione energia} non ha significato: non c'è una classe non banale in cui minimizzare l'energia. Il seguente esempio mostra che non è detto che ci siano dei punti di minimo locali non banali dell'energia.
+\begin{es}
+	Consideriamo la sfera \(M=\Sp^2 \subset \R^3\), definita dall'equazione \(x^2+y^2+z^2=1\). Le geodetiche della sfera sono i cerchi massimi, ovvero sono parametrizzazioni a velocità costante dell'interesezione di \(\Sp^2\) e un piano passante per l'origine (cf. Esempio~\ref{es: geodetiche non minimi}).
+	Sia \(\gamma_0 \in H^1(\Sp^1,\Sp^2)\) un punto critico dell'energia, vale a dire una geodetica. A meno di ruotare la sfera, possiamo supporre che 
+	\[
+		\gamma_0(t) = (\cos(2 k\pi t), \sin(2k \pi t),0) \qquad t \in \R.
+	\]
+	con \(k \in \Z\). Per una funzione \(u \in C^\infty(\R)\) 1-periodica, consideriamo
+	\[
+		\gamma_s(t) \coloneq (\cos(2k \pi t)\cos(s u(t)), \sin(2k\pi t)\cos(su(t)),\sin(su(t)))
+	\]
+	per ogni \(s \in (-\pi,\pi)\), \(t \in \R.\)
+	La mappa \(s \mapsto E(\gamma_s)\) è una funzione che ha \(s=0\) come punto critico. Osserviamo che
+	\[
+		E(\gamma_s) = \frac{1}{2} \int_0^1s^2 \dot u^2(t) + 4k^2\pi^2\cos^2(su(t))\ \dif t 
+	\]
+	e quindi
+	\[
+		\left.\frac{\dif^2}{\dif s^2}\right|_{s=0} E(\gamma_s) = \int_0^1 \dot u^2(t) - 4k^2\pi^2\cos(2su(t))u^2(t) \ \dif t.
+	\]
+	Scegliamo \(u\equiv 1\), e quindi 
+	\[
+			\left.\frac{\dif^2}{\dif s^2}\right|_{s=0} E(\gamma_s) = -4k^2\pi^2 <0.
+	\]
+	Dunque \(s=0\) non è un punto di minimo della funzione \(s \mapsto E(\gamma_s)\), cioè \(\gamma_0\) non è un punto di minimo locale dell'energia.
+	
+	\input{Disegni/Instabile.tex}
+\end{es}
+
+L'esempio precedente mostra che, in una generica varietà chiusa semplicemente connessa, è inutile provare a minimizzare l'energia. Nel 1917 G.D. Birkhoff, usando un procedimento di min-max, ha dimostrato l'esistenza di una geodetica chiusa su una qualunque superficie chiusa semplicemente connessa, vale a dire su una sfera \(\Sp^2\) dotata di una metrica Riemanniana qualunque \cite{birkhoff1917dynamical}.
+Generalizziamo l'idea di Birkhoff utilizzando il Teorema~\ref{teo: MP con energia}. Un elemento di un gruppo di omotopia di \(M\) genera una famiglia \(\phi\)-invariante \(\mathcal{H}\), su cui possiamo applicare il Teorema~\ref{teo: MP con energia}; pertanto il punto di partenza è trovare un gruppo di omotopia non banale:
+\begin{prop*A}
+	Se \(M\) è una varietà (topologica) \(n\)-dimensionale, chiusa e semplicemente connessa, allora esiste \(0<k < n\) tale che \(\pi_{k+1}(M) \not = \{0\}\). In particolare, se \(M\) è una varietà differenziabile, esiste una mappa \(f:\Sp^{k+1} \to M\) di classe \(C^\infty\) e omotopicamente non banale, cioè non omotopa relativamente al punto \(e_{k+1} \in \Sp^{k+1}\) a nessuna mappa costante. 
+\end{prop*A}
+La dimostrazione è rimandata all'Appendice~\ref{appendice}.
+La seguente costruzione può essere vista come un legame tra la topologia di \(M\) e la topologia di \(H^1(\Sp^1,M)\). Denotiamo con $\mathcal{F}$ l'insieme delle mappe \(F \in C^\infty(\D^k, C^0(\Sp^1,M))\) tali che
+\begin{itemize}
+	\item \(F(x) \in C^\infty(\Sp^1,M)\) per ogni \(x \in \D^k\);
+	\item \(F(x)\) è costante per ogni \(x \in \de \D^k\).
+\end{itemize}
+
+\begin{lemma}\label{lemma: corrispondenza f e F}
+	C'è una corrispondenza biunivoca
+	\begin{align*}
+		C^\infty(\Sp^{k+1},M) &\longleftrightarrow \mathcal{F}\\
+		f  & \mapsto f_*\\
+		F_\# & \mapsfrom  F .
+	\end{align*}
+\end{lemma}
+
+\begin{proof}
+	La corrispondenza segue dalla seguente costruzione. Consideriamo la sfera \(\Sp^{k+1}\) immersa come la sfera unitaria di \(\R^{k+2}\) e identifichiamo
+	\[
+	\D^k \equiv \{(x_0,0,z) \in \Sp^{k+1} \ | \ x_0 \geq 0\},
+	\]
+	come in Figura \ref{fig: costruzione di F}. Per ogni \(x=(x_0,0,z) \in \D^k\), sia \(\gamma_x:[0,1]\to \Sp^{k+1}\) definito da
+	\[
+	\gamma_x(t) \coloneq (x_0 \cos(2\pi t),x_0 \sin(2\pi t),z), \qquad t \in [0,1].
+	\]
+	Siccome la mappa 
+	\begin{align*}
+		\D^k \times \Sp^1 &\to \Sp^{k+1} \\
+		(x,t) &\mapsto \gamma_x(t)
+	\end{align*}
+	è una mappa \(C^\infty\), per il Lemma~\ref{lemma: identificazione curve/omotopie} anche la mappa
+	\begin{align*}
+		\gamma: \D^k \to C^\infty([0,1],\Sp^{k+1}) \subset C^0([0,1],\Sp^{k+1})
+	\end{align*}
+	è \(C^\infty\). Osserviamo che se \(x \in \de \D^k\), cioè \(x_0=0\), allora \(\gamma_x \equiv x\) è il cammino costante.
+	
+	Per \(f \in C^\infty(\Sp^{k+1},M) \), definiamo
+	\[
+		f_*(x) \coloneq f \circ \gamma_x,
+	\]
+	che è \(C^\infty\) perché composizione di mappe \(C^\infty\). In particolare, se \(x \in \de \D^k\), allora \(f_*(x) \equiv f(x)\) è un cammino costante. 
+	
+	\input{Disegni/costruzioneF.tex}
+	
+	Viceversa, sia \(F \in \mathcal{F}\). Allora la mappa 
+	\[
+	h(x,t) = F(x)(t), \qquad x\in \D^k, t \in [0,1]
+	\]
+	è una mappa liscia dal cilindro \(\D^k \times [0,1] \to M\). Dato che \(F(x)\) è un cammino costante se \(x \in \de \D^k\), possiamo definire \(f=F_\#\) come
+	\[
+	f(x_0 \cos (2\pi t), x_0 \sin (2 \pi t), z) = h(x,t) = F(x)(t), \qquad t \in [0,1], x \in \D^k,
+	\]
+	avendo identificato \(\D^k \subset \Sp^{k+1}\) come prima. La definizione è ben posta e \(f = F_\# \in C^\infty(\Sp^{k+1},M)\). 
+	
+	È evidente dalla costruzione che \(*\) e \(\#\) sono l'una l'inversa dell'altra.
+\end{proof}
+
+\begin{lemma}\label{lemma: corrispondenza h e H}
+	La corrispondenza del Lemma~\ref{lemma: corrispondenza f e F} si solleva ad una corrispondenza biunivoca tra le omotopie lisce, ovvero la stessa costruzione dà una corrispondenza biunivoca tra l'insieme delle omotopie lisce tra mappe in \(C^\infty(\Sp^{k+1},M)\), cioè
+	\[
+		C^\infty(\Sp^{k+1} \times [0,1],M),
+	\]
+	e l'insieme delle omotopie lisce tra mappe in \(\mathcal{F}\), cioè
+	\[
+		\{H \in C^\infty(\D^k \times [0,1], C^0(\Sp^1,M)) \ | \ H(\cdot,t) \in \mathcal{F} \quad \forall t \in [0,1] \}.
+	\]
+	
+	Inoltre questa costruzione si restringe anche alle omotopie lisce relative al punto \(e_{k+1} = (0,\dots,0,1) \in \D^k \subset \Sp^{k+1}\) (identificato come prima).
+\end{lemma}
+\begin{proof}
+	Sia \(h \in C^\infty(\Sp^{k+1} \times [0,1], M)\) un'omotopia liscia tra \(f_0=h(\cdot,0), f_1 = h(\cdot, 1) \in C^\infty(\Sp^{k+1},M)\). Per il Lemma~\ref{lemma: identificazione curve/omotopie}, la mappa 
+	\begin{align*}
+		[0,1] &\to C^\infty(\Sp^{k+1},M) \subset C^0(\Sp^{k+1},M)\\
+		t &\mapsto h_t=h(\cdot, t)
+	\end{align*}
+	è \(C^\infty\). Componendo con la corrispondenza del Lemma~\ref{lemma: corrispondenza f e F}, definiamo la mappa \(C^\infty\)
+	\[
+		h_*: \D^k \times [0,1] \to C^\infty(\Sp^1,M) \subset C^0(\Sp^1,M),
+	\]
+	definita quindi da
+	\[
+		h_*(x,t) \coloneq (h_t)_*(x). 
+	\]
+	Allora \(h_*\) è un'omotopia liscia tra \((f_0)_*\) e \((f_1)_*\). Inoltre, se \(h\) è un'omotopia liscia relativa a \(e_{k+1} \in \Sp^{k+1}\), cioè se
+	\[
+		h(e_{k+1},t) = p \in M \qquad \forall t \in [0,1]
+	\]
+	allora anche \(h_*(e_{k+1},t) \equiv p\) per ogni \(t \in [0,1]\).
+
+	L'altra costruzione è analoga, usando \(\#\). Inoltre, come sopra, le costruzioni sono l'una l'inversa dell'altra.
+\end{proof}
+
+Diamo adesso la dimostrazione del Teorema di Lusternik-Fet.
+
+\begin{proof}[Dimostrazione del Teorema~\ref{teo: Lusternik-Fet}(Lusternik-Fet)]
+	Se \(M\) non è semplicemente connessa, grazie al Teorema \ref{teo: minimizzazione energia} riusciamo a trovare una geodetica chiusa. Dunque supponiamo che \(M\) sia semplicemente connessa. 
+	
+	Per la Proposizione~\ref{prop: esiste f omotopicamente non banale}, esiste  \(f:\Sp^{k+1} \to M\) di classe \(C^\infty\) e omotopicamente non banale, per un certo \(0<k<n\). Sia \(F=f_*\) la mappa indotta da \(f\), come nel Lemma~\ref{lemma: corrispondenza f e F}. Sia \([f] \in \pi_{k+1}(M,p)\) la classe di \(f\), con \(p = f(e_{k+1})\), e denotiamo
+	\[
+	\mathcal{F}(F) \coloneq \left\{ G \in \mathcal{F} \ \middle| \ G_\# \in [f] \right\},
+	\]
+	che, con la corrispondenza del Lemma~\ref{lemma: corrispondenza h e H}, è anche l'insieme delle mappe \(G \in \mathcal{F}\) omotope a \(F\) relativamente a \(e_{k+1}\), con omotopia liscia.
+	Consideriamo
+	\[
+	\mathcal{H} \coloneq \{G(\D^k) \ | \ G \in \mathcal{F}(F)\}.
+	\]
+	Verifichiamo che \(\mathcal{H}\) sia \(\phi\)-invariante, con \(\phi\) il flusso definito dall'energia come nella Sezione~\ref{sez: MP con energia}. Sia \(T\geq 0\) e \(G(\D^k) \in \mathcal{H}\), con \(G \in \mathcal{F}(F)\); proviamo che \(\phi_T \circ G \in \mathcal{F}(F)\). Chiaramente, componendo con l'inclusione \(H^1(\Sp^1,M) \hookrightarrow C^0(\Sp^1,M)\), abbiamo \(\phi_T \circ G \in C^\infty(\D^k,C^0(\Sp^1,M))\). Per ogni \(x \in \D^k\), denotando \(\overline{G}: \D^k \times \Sp^1 \to M\) la mappa corrispondente a \(G\) attraverso l'isometria del Lemma~\ref{lemma: identificazione curve/omotopie},
+	\[
+		\frac{\dif \phi_T(G(x)(t))}{\dif t} = \frac{\dif \phi_T(\overline{G}(x,t)}{\dif t} = \dif \phi_T(G(x)(t)) \circ \frac{\de \overline{G}(x,t)}{\de t},
+	\]
+	e quindi \(\phi_T(G(x)) \in C^\infty(\Sp^1,M)\). Inoltre, chiaramente \(\phi_T \circ G\) è omotopa relativamente a \(e_{k+1}\) a \(G\), con omotopia liscia ottenuta riparametrizzando \(\phi|_{C^\infty(\Sp^1,M) \times [0,T]}\). Quindi \(\phi_T \circ G \in \mathcal{F}(F)\). 
+	
+	Osserviamo che
+	\[
+		\lambda \coloneq \inf_{H \in \mathcal{H}} \sup_{\gamma \in H} E(\gamma)
+	\]
+	è finito, in quanto \(\mathcal{H} \neq \emptyset\) e ogni \(H = G(\D^k) \in \mathcal{H}\) è compatto.
+	Per il Teorema~\ref{teo: MP con energia}, \(\lambda \geq 0\) è un valore critico, cioè esiste una geodetica \(\gamma \in H^1(\Sp^1,M)\) con energia \(E(\gamma)=\lambda\). 
+	
+	Per concludere, dobbiamo mostrare che \(\lambda >0\), perché in tal caso \(\gamma\) sarebbe una curva non costante. Supponiamo per assurdo che \(\lambda=0\). Sia \(\ve>0\) come nel Corollario~\ref{cor: epsilon per compatta}. Sia \(G=g_* \in \mathcal{F}(F)\) tale che \(E(G(x))<\ve^2/2\) per ogni \(x \in \D^k\). Per la (\ref{eq: L^2<2E}), 
+	\[
+		L(G(x)) < \ve \qquad \forall x \in \D^k
+	\]
+	e quindi la mappa esponenziale 
+	\[
+		\exp_{g(x)}: B_\ve(0_{g(x)}) \to M
+	\] 
+	è un diffeomorfismo con la sua immagine \(B_\ve(g(x))\). Definiamo
+	\[
+		W(x)(t) = W(x,t) \coloneq \exp_{g(x)}^{-1}(G(x)(t)).
+	\]
+	Osserviamo che \(W: \D^k \to TM\) è di classe \(C^\infty\) perché è una composizione di mappe \(C^\infty\). Definiamo \(H: \D^k \times [0,1] \to H^1(\Sp^1,M) \) come
+	\[
+		H(x,s)(t) \coloneq \exp(sW(x,t)).
+	\]
+	Chiaramente \(H\) è di classe \(C^\infty\). Inoltre
+	\begin{itemize}
+		\item per ogni \(x \in \D^k, t \in \Sp^1\),
+		\[
+			H(x,0)(t) =\exp(0_{g(x)}) = g(x),
+		\]
+		cioè \(H_0=H(\cdot,0)\) manda punti di \(\D^k\) in mappe costanti e \(H_0 \in \mathcal{F}\);
+		\item per ogni \(x \in \D^k, t \in \Sp^1\),
+		\[
+			H(x,1)(t) = \exp(W(x,t)) = G(x)(t);
+		\]
+		cioè \(H_1=G\);
+		\item per ogni \(x \in \de \D^k, s \in [0,1], t \in \Sp^1\), siccome \(W(x) \equiv 0_{g(x)}\)
+		\[
+			H(x,s)(t) = \exp(0_{g(x)}) = g(x) 
+		\]
+		cioè \(H\) è un'omotopia liscia relativa a \(\de \D^k\) (e quindi anche relativa a \(e_{k+1}\)) tra \(H_0\) e \(H_1=G\).
+	\end{itemize}
+	
+	\input{Disegni/RetrazioneDisco.tex}
+	
+	Osserviamo che \(h=(H_0)_\#: \Sp^{k+1} \to M\) è data da
+	\[
+	h(x_0 \cos (2\pi t), x_0 \sin (2 \pi t), z) = H_0(x)(t)=g(x), \qquad t \in [0,1], x \in \D^k,
+	\]
+	dunque se \(\rho:\D^k \to \D^k\) è una retrazione di \(\D^k\) nel punto \(e_{k+1}\), \(h\) è omotopa alla mappa costante \(h \circ \rho \equiv p\) relativamente a \(e_{k+1}\). Per il Lemma~\ref{lemma: corrispondenza h e H}, ci sono le seguenti omotopie lisce relative a \(e_{k+1}\)  (denotate con il simbolo \(\sim\)) tra mappe \(C^\infty(\Sp^{k+1},M)\):
+	\[
+		h \circ \rho \sim h \sim g \sim f.
+	\]
+	Assurdo, perché \(f\) è omotopicamente non banale. 
+	
+	Dunque deve essere \(\lambda>0\), e questo conclude la dimostrazione.
+\end{proof}
+
+
+\section{Dopo il teorema di Lusternik-Fet}
+
+Alla luce del Teorema~\ref{teo: Lusternik-Fet}, è naturale chiedersi:
+\begin{enumerate}[label=(\arabic*)]
+	\item Quante geodetiche chiuse geometricamente distinte esistono?
+	\item Esiste sempre una geodetica chiusa semplice, cioè che non si autointerseca?
+	\item Esistono risultati analoghi per sottovarietà chiuse di dimensione maggiore di 1?
+\end{enumerate}
+
+Per chiarire la domanda (1), dobbiamo prima precisare cosa vuol dire distinguere geometricamente due curve. 
+\begin{defi}
+	Due curve chiuse \(\gamma, \widetilde{\gamma} : \Sp^1 \to M\) si dicono \textit{geometricamente distinte} se non esistono \(a,b \in \R\) tale che
+	\[
+		\gamma(at+b) = \widetilde{\gamma}(t).
+	\]
+\end{defi}
+In questo modo, una geodetica è sempre geometricamente distinta da una curva non geodetica. 
+\begin{teo}
+	In una varietà Riemanniana chiusa con gruppo fondamentale finito esistono infinite geodetiche chiuse non costanti a due a due geometricamente distinte.
+\end{teo}
+Per una dimostrazione si veda \cite[Theorem 4.3.5]{klingenberg2012lectures}.
+
+La domanda (2) ha una risposta nel caso di una superficie compatta semplicemente connessa, cioè della sfera \(M=\Sp^2\) dotata di una metrica Riemanniana arbitraria:
+\begin{teo}[Lusternik-Schnirelmann, 1929]
+	Sulla sfera \(\Sp^2\) con una metrica Riemanniana arbitraria esistono almeno tre geodetiche chiuse geometricamente distinte e senza autointersezioni.
+\end{teo}
+Per una dimostrazione si veda \cite[Theorem A.3.1]{klingenberg2012lectures}. Il risultato non può essere migliorato, come mostra il seguente esempio ottenuto da Morse.
+\begin{es}[Morse]
+	Sia \(E=E(a,b,c) \subset \R^3\) l'ellissoide di equazione
+	\[
+		\frac{x^2}{a^2}+\frac{y^2}{b^2}+\frac{z^2}{c^2}=1
+	\] 
+	dotato della metrica indotta da quella piatta di \(\R^3\). Esiste \(\ve >0\) tale che, se 
+	\[
+		1-\ve < a < b < c < 1+\ve,
+	\]
+	allora le uniche geodetiche chiuse senza autointersezioni sono le tre ellissi principali, ottenute intersecando \(E\) con i piani coordinati. Per una dimostrazione si veda \cite[Proposition 5.1.2]{klingenberg2012lectures}.
+\end{es}
+
+La domanda (3) è un problema attuale della geometria Riemanniana: studiare lo spazio delle \(k\)-sottovarietà Riemanniane attraverso il funzionale \(k\)-volume con metodi variazionali. Ad esempio, un'ipersuperficie chiusa \(\Sigma\) di una (\(n+1\))-varietà \(M\) è un'\textit{ipersuperficie minima} se è un punto critico del funzionale \(n\)-volume. Quando \(n=1\), si tratta di geodetiche chiuse di una superficie. Per \(n>1\) non è più possibile sfruttare il teorema di immersione di Sobolev per concludere che le superfici minime sono lisce, e in effetti non è assicurato. Tuttavia, come per il teorema di Lusternik-Fet, i metodi di min-max si sono rivelati degli strumenti molto potenti per dimostrare risultati di esistenza di ipersuperfici minime chiuse lisce. F. Almgren e J. Pitts hanno generalizzato il teorema di Lusternik-Fet delle geodetiche alle ipersuperfici minimie per \(2 \leq n \leq 5\) \cite{pitts1981existence}, che poi R. Schoen e L. Simon hanno esteso al caso \(n=6\) \cite{schoen1981regularity}:
+\begin{teo}[Almgren-Pitts-Schoen-Simon, 1981]
+	Ogni \((n+1)\)-varietà Riemanniana chiusa con \(2 \leq n \leq 6\) contiene un'ipersuperficie minima chiusa liscia. 
+\end{teo}
+In realtà hanno mostrato che anche per \(n \geq 7\) esiste un'ipersuperficie minima, ma potrebbe essere singolare (nel senso delle \textit{correnti integrali} \cite{delellis2015size}) in un sottoinsieme con codimensione di Hausdorff almeno 7.
+
+Motivato da questo risultato, S.-T. Yau formulò in \cite{yau1981seminar} la seguente congettura.
+\begin{conget}[Yau, 1981]
+	Ogni 3-varietà chiusa contiene infinite superfici minime lisce. 
+\end{conget}
+Usando dei metodi di min-max e i lavori di Marques-Neves \cite{marques2013existence} \cite{marques2016morseindexmultiplicityminmax} \cite{marques2019morseindexmultiplicityminmax}, Irie-Marques-Neves \cite{irie2018densityminimalhypersurfacesgeneric}, Marques-Neves-Song \cite{marques2018equidistributionminimalhypersurfacesgeneric} e Liokumovich-Marques-Neves \cite{liokumovich2018weyllawvolumespectrum}, la congettura di Yau è stata provata in una forma più forte nel 2018 da A. Song in \cite{song2023existence}:
+\begin{teo}[Song, 2018]
+	Ogni \((n+1)\)-varietà Riemanniana chiusa con \(2 \leq n\leq 6\) contiene infinite ipersuperfici minime chiuse lisce. 
+\end{teo}
+
+
+
+

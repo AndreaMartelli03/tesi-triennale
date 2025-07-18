@@ -1,0 +1,33 @@
+\begin{figure}[h]
+	\centering
+	\begin{tikzpicture}[decoration={markings, mark=at position 0.5 with {\arrow{>}}}]
+		
+		%linee
+		\draw [thick] (0,0) circle (2);
+		\draw[thick] (-2,0) arc (180:360: 2 and 0.55);
+		\draw[decorate] (-2,0) arc (180:360: 2 and 0.55);
+		\draw [thick, dashed] (2,0) arc (0:180: 2 and 0.55);
+		\draw[decorate] (-2,0) arc (180:42: 2 and 0.55);
+		\draw[thin,->] (0,0) -- (0,3);
+		\draw[thin,->] (0,0) -- (3,0);
+		\draw[thin,->] (0,0) -- (-2.3,-1.5);
+		\fill (-0.777,-0.507) circle (1.5pt)
+		(0.777,-0.507) circle (1.5pt);
+		
+		%nomi
+		\node at(2,2){\(\Sp^{2}\)};
+		\node at (-2.2,-1.8) {\(x\)};
+		\node at (3,-0.3){\(y\)};
+		\node at (-0.4,2.8){\(z\)};
+		\node at  (0,-1) {\(\gamma_1\)};
+		\node at  (-2.4,0) {\(\gamma_2\)};
+		\node at (-0.777,-0.8){\(p\)};
+		\node at (0.777,-0.8) {\(q\)};
+		
+	\end{tikzpicture}
+	
+	\caption{\(L(\gamma_1) < L(\gamma_2)\).}
+	
+	\label{fig: geodetica non minima}
+	
+\end{figure}

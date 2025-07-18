@@ -1,0 +1,326 @@
+
+	Un'analisi accurata dal punto di vista variazionale del funzionale energia richiede l'introduzione di spazi completi su cui l'energia è definita in maniera naturale. Nell'ottica del teorema di Lusternik-Fet, ci restringiamo fin da subito allo studio dello spazio \(H^1(\Sp^1,M)\) delle curve \textit{chiuse} di classe \(H^1\), vale a dire con una nozione debole di vettore tangente e con energia finita.
+	
+	Nella prima sezione richiamo alcuni fatti di analisi funzionale, fondamentali per tutto quello che segue. La seconda sezione è una rapidissima introduzione alle varietà di Banach e di Hilbert, che spesso sono definiti ‘‘naturalmente'' a partire da varietà Riemanniane di dimensione finita. La terza sezione tratta la costruzione della varietà di Hilbert \(H^1(\Sp^1,M)\) delle curve chiuse di classe \(H^1\); l'approccio è estrinseco, cioè assumiamo che \(M \subset \R^N\). Infine nella quarta sezione studiamo la regolarità del funzionale energia su \(H^1(\Sp^1,M)\) e caratterizziamo le geodetiche (chiuse) come i suoi punti critici: questo giustifica tutta l'analisi variazionale del Capitolo 3.
+
+\section{Richiami di analisi funzionale}
+
+Richiamiamo qui alcune definizioni e alcuni risultati di analisi funzionale, tratti da \cite{brezis2011functional}, fondamentali per tutto quello che segue. 
+
+Sia \(I\) un intervallo. Per \(1 \leq p \leq \infty\), denotiamo con \(W^{1,p}(I)\) lo spazio di Sobolev \((1,p)\), ovvero lo spazio delle funzioni \(u \in L^p(I)\) per le quali esiste \(\dot u \in L^p(I)\), detta \textit{derivata debole} di \(u\), tale che
+\[
+\int_I u\dot v \ \dif t = - \int_I \dot u v \ \dif t
+\]
+per ogni \(v \in C_0^\infty(I)\), cioè di classe \(C^\infty\) e a supporto compatto in \(I\). La derivata debole è unica in \(L^p(I)\) (cf. \cite[p. 203 Remark 3]{brezis2011functional}). Se \(I\) è un intervallo limitato, le inclusioni degli spazi \(L^p\) inducono le inclusioni
+\[
+	W^{1,p}(I) \subset W^{1,q}(I) \quad  \text{ se }p \geq q.
+\]
+Quando \(p = 2\), \(H^1(I) = W^{1,2}(I)\) è uno spazio di Hilbert se dotato del prodotto scalare
+\begin{align*}
+	\langle u,v \rangle_{H^1(I)} \coloneq & \langle u,v \rangle_{L^2(I)} + \langle \dot u, \dot v \rangle_{L^2(I)} &\\
+	= & \int_I uv \ \dif t + \int_I \dot u \dot v \ \dif t  & u,v \in H^1(I).
+\end{align*}
+Se consideriamo funzioni a valori vettoriali \(u: I \to \R^n\), scriviamo \(L^p(I,\R^n)\), \(W^{1,p}(I,\R^n)\) e \(H^1(I,\R^n)\): le definizioni sono le stesse utilizzando il prodtto scalare di \(\R^n\), e in particolare
+\[
+\langle u, v \rangle_{H^1(I,\R^n)} = \int_I \langle u(t),v(t)\rangle_{\R^n} \ \dif t, \qquad u,v \in H^1(I,\R^n)
+\]
+Chiaramente, \(L^p(I,\R^n)\) e \(W^{1,p}(I,\R^n)\) sono canonicamente isomorfi al prodotto di \(n\) copie rispettivamente di \(L^p(I)\) e \(W^{1,p}(I)\).
+
+Ricordiamo il seguente risultato (si veda \cite{brezis2011functional}, Theorem 8.2, Theorem 8.8, Theorem 3.17).
+\begin{teo}\label{teo: immersione di Sobolev}
+	Sia \(I\) un intervallo limitato. Per ogni \(u \in W^{1,1}(I)\) esiste un'unica funzione \(\widetilde{u} \in C^0(\overline{I})\) tale che \(u=\widetilde{u}\) quasi ovunque su \(I\) e
+	\[
+	\widetilde{u}(t_1)-\widetilde{u}(t_0) = \int_{t_0}^{t_1}\dot u \ \dif t, \qquad \forall t_0,t_1 \in I.
+	\]
+	Inoltre, se \(p>1\), la mappa iniettiva
+	\begin{align*}
+		W^{1,p}(I) &\hookrightarrow C^0(\overline{I}) \\
+		u &\mapsto \widetilde{u}
+	\end{align*}
+	è compatta, cioè manda sottoinsiemi limitati in precompatti, e in particolare è continua. 
+	
+	Se \(1<p<+\infty\) per ogni successione limitata \((u_h)_h \subset W^{1,p}(I)\) esistono una sottosuccessione \((u_{h_k})_k\) e \(u \in W^{1,p}(I)\) tali che
+	\begin{itemize}
+		\item \(u_{h_k} \rightharpoonup u\) in \(W^{1,p}(I)\);
+		\item \(u_{h_k} \to u\) in \(C^0(\overline{I})\).
+	\end{itemize}
+\end{teo}
+Questo risultato si estende in maniera naturale agli spazi \(W^{1,p}(I,\R^n)\). Nel seguito, quando prendiamo \(u \in H^1(I,\R^n)\), in realtà supporremo sempre di aver preso il rappresentante continuo \(\widetilde{u}\). 
+
+Lo spazio \(H^1(\Sp^1,\R^n)\) è la chiusura in \(H^1(\R,\R^n)\) dello spazio delle funzioni \(u \in C^\infty(\R,\R^n)\) 1-periodiche, cioè tali che \(u(1+t) = u(t)\) per ogni \(t \in \R\). Possiamo pensare alle funzioni \(u \in H^1(\Sp^1,\R^n)\) come mappe \(u: \Sp^1 \to \R^n\), dove \(\Sp^1 = [0,1]/\{0,1\}\), o come mappe \(u: \R \to \R^n\) 1-periodiche. Se \(I=(0,1)\), la mappa restrizione
+\begin{align*}
+	H^1(\Sp^1,\R^n) &\to H^1(I,\R^n) \\
+	u &\mapsto u|_I
+\end{align*}
+è lineare, iniettiva e continua, e l'immagine è un sottospazio chiuso (e quindi anche debolmente chiuso) di \(H^1(I,\R^n)\). Dunque il Teorema~\ref{teo: immersione di Sobolev} si estende naturalmente allo spazio \(H^1(\Sp^1,\R^n)\) :
+
+\begin{teo}\label{teo: immersione Sobolev per S^1}
+	L'immersione del Teorema~\ref{teo: immersione di Sobolev} induce l'immersione compatta
+	\[
+		H^1(\Sp^1,\R^n) \hookrightarrow C^0(\Sp^1,\R^n).
+	\]
+	In particolare, per ogni successione limitata \((u_h)_h \subset H^1(\Sp^1,\R^n)\) esistono una sottosuccessione \((u_{h_k})_k\) e \(u \in H^1(\Sp^1,\R^n)\) tali che
+	\begin{itemize}
+		\item \(u_{h_k} \rightharpoonup u\) in \(H^1(\Sp^1,\R^n)\);
+		\item \(u_{h_k} \to u\) in \(C^0(\Sp^1,\R^n)\).
+	\end{itemize}
+\end{teo}
+
+\section{Varietà di Banach e di Hilbert}\label{sez: var Banach/Hilbert}
+Questa sezione è dedicata a una rapida introduzione delle varietà di Banach e di Hilbert, basata parzialmente su \cite[Section~6.1]{ambrosetti2007nonlinear}. Consideriamo solo il caso delle sottovarietà di uno spazio di Banach \((\mathbb{E}, \| \cdot\|)\) o di uno spazio di Hilbert \((\mathbb{H}, \langle \cdot, \cdot \rangle)\); per una trattazione completa e generale, si veda \cite{lang2001fundamentals}.  I modelli da tenere presente sono delle varietà di mappe, ad esempio \(C^0(S,M)\) per le varietà di Banach, dove \(S\) è uno spazio topologico compatto e \((M,g)\) è una varietà Riemanniana (di dimensione finita), e \(H^1(\Sp^1,M)\) per le varietà di Hilbert, lo spazio delle curve chiuse di classe \(H^1\) su una varietà Riemanniana chiusa \((M,g)\). La Sezione~\ref{sez: H^1(S,M)} è interamente dedicata a costruire \(H^1(\Sp^1,M)\), mentre per la costruzione della struttura di varietà di Banach di \(C^0(S,M)\) rimandiamo a \cite{eells1958geometry}. 
+
+\begin{defi}
+Sia \((\mathbb{E}, \|\cdot \|)\) uno spazio di Banach. Un sottoinsieme \(E \subset \mathbb{E}\) è una \textit{varietà di Banach} (di classe \(C^\infty\)) se esiste un ricoprimento aperto \(\{U_\alpha\}_{\alpha \in \mathcal{A}}\) di \(E\) e una famiglia di spazi di Banach \(\{\E_\alpha\}_{\alpha \in \mathcal{A}}\) e una collezione di mappe \(\psi_\alpha : V_\alpha \to \mathbb{H}\), con \(V_\alpha \subset \E_\alpha\) aperto omeomorfo a una palla aperta di \(\E_\alpha\), tali che siano soddisfatte le seguenti condizioni:
+\begin{itemize}
+	\item \(\psi_\alpha(V_\alpha) = U_\alpha\) è aperto in \(\mathcal{E}_\alpha\) e \(\psi_\alpha\) è un omeomorfismo da \(V_\alpha\) in \(U_\alpha\);
+	\item \(\psi^{-1}_\beta \circ \psi_\alpha: V_\alpha \cap \psi^{-1}_\alpha(U_\beta) \to \psi_\beta(U_\alpha) \cap V_\beta\) è di classe \(C^\infty\) (nel senso di Frechét, cf. \cite[Definition 1.1]{ambrosetti2007nonlinear});
+	\item il differenziale \((\dif \psi_\alpha)_x: \E_\alpha \to \mathbb{H}\) sia iniettivo per ogni \(x \in V_\alpha\).
+\end{itemize}
+Le mappe \(\psi_\alpha\) sono dette \textit{parametrizzazioni locali} e la famiglia \(\{U_\alpha,\psi^{-1}_\alpha\}_{\alpha \in \mathcal{A}}\) è detta \textit{atlante}. 
+
+Se \(\E= \mathbb{H}\) è uno spazio di Hilbert, allora \(E\) si dice una \textit{varietà di Hilbert}.
+
+Una mappa \(f: E' \to E\) tra due varietà di Banach \(E' \subset \mathbb{E}'\) ed \(E\subset \mathbb{E}\) si dice \textit{liscia} oppure \textit{di classe \(C^\infty\)} se, data una parametrizzazione locale  \(\psi'_a:V_a' \subset \E'_a \to \mathbb{E}'\) di \(E'\) e una parametriazzazione locale \(\psi_\alpha:V_\alpha \subset \E_\alpha \to \mathbb{E}\) di \(E\) tale che \(\psi'_a(V_a') \cap f^{-1}(\psi_\alpha(V_\alpha)) \neq \emptyset\), la mappa
+\[
+	\psi_\alpha^{-1} \circ f \circ \psi_a': V_a' \cap (\psi_a')^{-1}(f^{-1}(\psi_\alpha(V_\alpha))) \to \E_\alpha
+\]
+è di classe \(C^\infty\) (nel senso di Frechét).
+\end{defi}
+
+Chiaramente, ogni sottoinsieme aperto di uno spazio di Banach (Hilbert) è una varietà di Banach (Hilbert). Un esempio importante di varietà di Banach è \(C^0(S,M)\), dove \(S\) è uno spazio topologico compatto e \((M,g)\) è una varietà Riemanniana (si veda \cite{eells1958geometry}). Notare che non abbiamo richiesto la proprietà di connessione, perché molte varietà di Banach (o di Hilbert) definite in maniera naturale a partire da varietà Riemanniane non sono connesse (cf. Sezione~\ref{sez: non semplicemente connesso}). 
+
+\begin{defi}
+	Siano \(E \subset \mathbb{E}\) una varietà di Banach e \(u \in E\). Sia \(\psi_\alpha: V_\alpha \subset \E_\alpha \to \mathbb{E}\) una parametrizzazione locale, con \(u=\psi_\alpha(x) \in \psi_\alpha(V_\alpha)\). Lo spazio tangente \(T_uE\) ad \(E\) in \(u\) è l'immagine della mappa lineare, iniettiva e continua \((\dif \psi_\alpha)_x:\E_\alpha \to \mathbb{E}\).
+\end{defi}
+La definizione non dipende dalla scelta della parametrizzazione. Infatti sia \(\psi_\beta: V_\beta \subset \E_\beta \to \mathbb{E}\) un'altra parametrizzazione locale con \(u \in \psi_\beta(V_\beta)\) e consideriamo il diagramma commutativo
+\[
+\begin{tikzcd}[row sep=large]
+	\mathbb{E}  \arrow[r,<->] & \mathbb{E} \\
+	V_\alpha \cap(\psi_\alpha^{-1}(\psi_\beta(V_\beta)) \subset \E_\alpha \arrow[u, "\psi_\alpha"'] \arrow[r, "\psi_\beta^{-1} \circ \psi_\alpha"] & V_\beta \cap \psi_\beta^{-1}(\psi_\alpha(V_\alpha))\subset \E_\beta.   \arrow[u, "\psi_\beta"]
+\end{tikzcd}
+\]
+Poiché \(\psi_\beta^{-1} \circ \psi_\alpha\) è un diffeomorfismo, si ha che \(\mathrm{Im}(\dif \psi_\alpha)_y = \mathrm{Im} (\dif \psi_\beta)_{y'}\) per ogni \(y \in V_\alpha \cap \psi_\alpha^{-1}(\psi_\beta(V_\beta))\) e \(y' = \psi_\beta^{-1} \circ \psi_\alpha(y)\). Inoltre, \(\E_\alpha\) ed \(\E_\beta\) sono isomorfi.
+
+Dalla definizione segue subito che \(T_u E\), con la norma di \(\E\) ristretta, è uno spazio di Banach isomorfo a \(\E_\alpha\), e quindi un sottospazio vettoriale chiuso di \(\mathbb{E}\). Se \(E\) è una varietà di Hilbert, per ogni \(u \in E\) possiamo decomporre \(\mathbb{E}= \mathbb{H}\) nella somma diretta dei due sottospazi vettoriali chiusi \(\mathbb{H} = T_uE \oplus N_uE\), con 
+\[
+	N_uE \coloneq (T_uE)^\perp
+\]
+lo \textit{spazio normale} ad \(E\) in \(u\).
+
+\begin{defi}
+	Il \textit{fibrato tangente} di \(E\) è l'insieme 
+	\[
+		TE \coloneq \{(u,v) \in E \times \mathbb{E} \ | \ v \in T_uE\}
+	\]
+	dotato della proiezione sulla prima componente \(\pi:TE \to E\). 
+\end{defi}
+
+Prendendo i differenziali delle parametrizzazioni locali, è immediato osservare che \(TE \subset \mathbb{E} \times \mathbb{E}\) è una varietà di Banach. 
+
+\begin{defi}
+	Sia \(f: E' \subset \mathbb{E}' \to E \subset \mathbb{E}\) una mappa liscia tra due varietà di Banach. Il \textit{differenziale} di \(f\) è la mappa \(\dif f: TE' \to TE\) definita dal seguente diagramma commutativo 
+	\[
+	\begin{tikzcd}[row sep={tiny}, column sep=large]
+		TE' \arrow[r,"\dif f"] & TE \\
+		\arrow[phantom, "\strut"] & \\
+		\arrow[phantom, "\strut"] & \\
+		V'_a \times \E'_a \arrow[uuu,"\psi'_a"] \arrow[r,"\dif (\psi_\alpha^{-1} \circ f \circ \psi'_a)"] & V_\alpha \times \E_\alpha \arrow[uuu,"\psi_\alpha"'] \\
+		(x,v) \arrow[r, mapsto] & ((\psi_\alpha^{-1} \circ f \circ \psi'_a) (x),\dif (\psi_\alpha^{-1} \circ f \circ \psi'_a) (x) [v])
+	\end{tikzcd}
+	\]
+	per ogni parametrizzazione locale \(\psi'_a:V'_a \subset \E'_a \to \mathbb{E}'\) di \(E'\) e \(\psi_\alpha:V_\alpha \subset \E_\alpha \to \mathbb{E}\) di \(E\) tale che \(\psi'_a(V'_a) \cap f^{-1}(\psi_\alpha(V_\alpha)) \neq \emptyset\).
+\end{defi}
+
+Da adesso assumiamo che \(E \subset \mathbb{H}\) sia una varietà di Hilbert. È possibile dotare \(E\) di una metrica \(g\), cioè di un'applicazione che associa a ogni punto \(u \in E\) un prodotto scalare \(g_u\) su \(T_uE\), restringendo il prodotto scalare di \(\mathbb{H}\)
+\[
+	g_u(X,Y) \coloneq \langle X, Y \rangle \qquad \forall X,Y \in T_uE.
+\]
+
+\begin{defi}
+	Sia \(f: E \to \R\) un funzionale \(C^\infty\). Il \textit{gradiente} di \(f\) è il campo vettoriale liscio
+	\[
+		\grad f: E \to TE
+	\]
+	che a ogni \(u \in E\) associa il vettore \(\grad f(u) \in T_uE\) che rappresenta il funzionale lineare \((\dif f)_u:T_uE \to \R\) rispetto al prodotto scalare \(g_u\):
+	\[
+		(\dif f)_u[v] = g_u(\grad f(u), v) \qquad \forall v \in T_uE.
+	\]
+\end{defi}
+
+Come per le sottovarietà Riemanniane, l'ambiente \(\mathbb{H}\) induce un'ulteriore struttura su \(E\), il \textit{fibrato normale}
+\[
+	NE \coloneq \{(u,v) \in E \times \mathbb{H} \ | \ v \in N_uE\},
+\]
+che si può vedere facilmente essere una varietà di Hilbert contenuta in \(\mathbb{H}\times \mathbb{H}\). Inoltre, sono naturalmente definite la \textit{proiezione tangenziale} 
+\[\pi^\parallel: E \times \mathbb{H} \to TE\]
+e la \textit{proiezione normale} 
+\[\pi^\perp: E \times \mathbb{H} \to NE.\]
+Talvolta, per \(u \in E\) fissato, scriveremo \(\pi^\parallel_u: \mathbb{H} \to T_uE\) e \(\pi^\perp_u:\mathbb{H} \to N_uE\) per le restrizioni a \(\{u\} \times \mathbb{H} \equiv \mathbb{H}\).
+
+\begin{oss}\label{oss: estensioni di funzioni}
+	Supponiamo che \(f:E \to \R\) si estenda a un funzionale liscio \(\widetilde{f}: U \to \R\), con \(U\) intorno aperto di \(E\) in \(\mathbb{H}\). Allora \(f\) è un funzionale liscio su \(E\) e il differenziale è la restrizione di \(\dif \widetilde{f}\) a \(TE\). Inoltre, se \(\grad \widetilde{f} \in C^\infty(U,\mathbb{H})\) è il gradiente di \(\widetilde{f}\), allora per ogni \(u \in E\)
+	\[
+		\grad f(u) = \pi^\parallel (u,\grad \widetilde{f}) .
+	\]
+\end{oss}
+
+\section{La varietà di Hilbert \(H^1(\Sp^1,M)\)}\label{sez: H^1(S,M)}
+
+Sia \(M \subset \R^N\) una sottovarietà Riemanniana di \(\R^N\) (dotato della metrica piatta). Questa ipotesi non è restrittiva nel senso del Teorema~\ref{teo: embedding isometrico di Nash}: tutto quello che segue può essere dimostrato anche in modo intrinseco, cioè senza assumere un embedding in \(\R^N\) (si veda \cite[Chapter~1]{klingenberg2012lectures} oppure \cite[Section~2.3]{klingenberg1995riemannian}). 
+
+Definiamo lo \textit{spazio delle curve chiuse di classe \(H^1\)} come
+\[
+	H^1(\Sp^1,M) \coloneq \{ \gamma \in H^1(\Sp^1,\R^N) \ | \ \gamma(t) \in M \ \forall t \in \Sp^1\}
+\]
+Per ogni \(\gamma \in H^1(\Sp^1,M)\) è definito quasi ovunque il vettore tangente debole \(\dot \gamma \in L^2(I,\R^N)\). È ancora lecito chiamare \(\dot \gamma\) ‘‘vettore tangente''. Infatti, sia \((\gamma_h)_h \subset C^\infty(\Sp^1,M)\) tale che \(\gamma_h \to \gamma \quad \text{in }H^1(\Sp^1,\R^N)\).
+Una conseguenza della dimostrazione del teorema di Riesz-Fischer è che, a meno di estrarre una sottosuccessione, \((\gamma_h(t),\dot \gamma_h(t)) \to (\gamma(t),\dot \gamma(t))\) per quasi ogni \(t \in I\) (cf. \cite[Theorem 4.9]{brezis2011functional}). Poiché \(TM \subset \R^N \times \R^N\) è chiuso, \(\dot \gamma(t) \in T_{\gamma(t)}M\) per q.o. \(t \in I\).
+
+\begin{prop}\label{prop: approssimazione con curve lisce}
+	Per ogni \(\gamma \in H^1(\Sp^1,M)\) esistono \(\gamma_0 \in C^\infty(I,M)\) e \(X \in H^1(\Sp^1,\R^N)\) tale che \(X(t) \in T_{\gamma_0(t)}M\) per ogni \(t \in \Sp^1\) e
+	\[
+		\gamma(t) = \exp_{\gamma_0(t)}(X(t)).
+	\]
+\end{prop}
+\begin{proof}
+	Dato che \(\Sp^1\) è compatto, come nel Corollario~\ref{cor: epsilon per compatta} possiamo trovare \(\ve >0\) tale che \(r(\gamma(t))> \ve\) per ogni \(t \in \Sp^1\). Poiché \(C^\infty(\Sp^1,M)\) è denso in \(C^0(\Sp^1,M)\), esiste \(\gamma_0 \in C^\infty(\Sp^1,M)\) tale che
+	\[
+	d(\gamma(t),\gamma_0(t)) < \ve \qquad \forall t \in \Sp^1.
+	\]
+	In particolare, per ogni \(t \in \Sp^1\) esiste un unico \(X(t) \in T_{\gamma_0(t)}M\) tale che
+	\[
+	\gamma(t) = \exp_{\gamma_0(t)}(X(t)).
+	\]
+	Che \(X \in H^1(\Sp^1,\R^N)\) segue dal fatto che la mappa esponenziale è un diffeomorfismo. 
+\end{proof}
+
+\begin{oss}\label{oss: H1 varietà di Hilbert}
+La Proposizione~\ref{prop: approssimazione con curve lisce} permette di dare ad \(H^1(\Sp^1,M)\) una struttura di varietà di Hilbert. Infatti basta scegliere, al variare di \(\gamma \in C^\infty(\Sp^1,M)\), l'atlante indotto dalle parametrizzazioni locali
+\[
+\exp_\gamma : \mathcal{B}(\gamma) \to H^1(\Sp^1,\R^N)
+\]
+con 
+\[
+	\mathcal{B}(\gamma) \coloneq \left\{X \in H^1(\Sp^1,\R^N) \ \middle| \ 
+	\begin{aligned}
+		&X(t) \in T_{\gamma(t)}M, \\
+		&|X(t)|_{\gamma(t)} < \ve_\gamma
+	\end{aligned}
+	\quad  \forall t \in \Sp^1
+	\right\},
+\]
+dove \(\ve_\gamma \coloneq \inf_{t \in \Sp^1} r(\gamma(t))\), e
+\[
+\exp_\gamma(X)(t) = \exp_{\gamma(t)}(X(t))
+\]
+per ogni \(X \in \mathcal{B}(\gamma)\), \(t \in \Sp^1\). 
+
+Lo spazio tangente a \(H^1(\Sp^1,M)\) in \(\gamma\) è
+\[
+	T_\gamma H^1(\Sp^1,M) = \{ X \in H^1(\Sp^1,\R^N) \ | \ X(t) \in T_{\gamma(t)}M \ \forall t \in \Sp^1\}.
+\]
+\end{oss}
+
+\begin{defi}
+	La \textit{derivata covariante debole} lungo \(\gamma\) di un campo \(V \in T_\gamma H^1(\Sp^1,M)\) è 
+	\[
+		D_\gamma V \coloneq \dot V - \sff(\dot \gamma, V),
+	\]
+	dove \(\sff\) è la seconda forma fondamentale di \(M\). 
+\end{defi}
+\begin{oss}
+	Dalla (\ref{eq: formula Gauss curve in M in R^N}) segue che la derivata covariante debole coincide con quella calssica quando \(V \in \T(\gamma)\). Inoltre vale la seguente formula di integrazione per parti: per ogni \(W \in \T(\gamma)\),
+	\[
+		\int_{\Sp^1} \langle V, D_\gamma W \rangle_\gamma \ \dif t = - \int_{\Sp^1} \langle D_\gamma V, W \rangle_\gamma \ \dif t.
+	\]
+\end{oss}
+
+\section{Il funzionale energia}
+
+Su \(H^1(\Sp^1,M)\) è ben definito il \textit{funzionale energia}
+\[
+	E(\gamma) \coloneq \frac{1}{2}\int_{\Sp^1} |\dot \gamma |^2 \ \dif t, \qquad \gamma \in H^1(\Sp^1,M).
+\]
+
+\begin{teo}\label{teo: energia è liscia}
+	Il funzionale energia è di classe \(C^\infty\) e, per ogni \(\gamma \in H^1(\Sp^1,M)\),
+	\[
+	\dif E(\gamma) [W] = \int_{\Sp^1} \langle D_\gamma W, \dot \gamma \rangle \ \dif t, \quad \forall W \in T_\gamma H^1(\Sp^1,M).
+	\]
+\end{teo}
+\begin{proof}
+	Consideriamo l'estensione \(\widetilde{E}:H^1(\Sp^1,\R^N) \to \R\) definita da
+	\[
+	\widetilde{E}(u) \coloneq \frac{1}{2}\|\dot u \|^2_{L^2(I,\R^N)}, \qquad u \in H^1(\Sp^1,\R^N).
+	\]
+	Osserviamo che \(\widetilde{E}\) è la composizione di due mappe \(C^\infty\), ovvero \(\widetilde{E}=q \circ T\) dove
+	\begin{align*}
+		T: H^1(\Sp^1,\R^N) &\to L^2(I,\R^N) \\
+		u &\mapsto \dot u,
+	\end{align*}
+	è lineare e continua, e in particolare ha come differenziale la mappa costante \(\dif T(u)=T\), e quindi \(T\) è di classe \(C^\infty\);
+	\begin{align*}
+		q: L^2(\Sp^1,\R^N) &\to \R \\
+		u &\mapsto \frac{1}{2} \| u \|^2_{L^2}.
+	\end{align*}
+	ha come gradiente \(\nabla q = \id_{L^2(I,\R^N)}\), e quindi \(q \in C^\infty\). Di conseguenza anche \(\widetilde{E}=q \circ T\) è \(C^\infty\) e il differenziale è dato da
+	\[
+		\dif \widetilde{E}(u)[v] = \langle \dot u, \dot v \rangle_{L^2(I,\R^N)}.
+	\]
+	
+	Per l'Osservazione~\ref{oss: estensioni di funzioni}, \(E= \widetilde{E}|_{H^1(\Sp^1,M)}\) è un funzionale \(C^\infty\) su \(H^1(\Sp^1,M)\) e il differenziale è dato da
+	\begin{align*}
+		\dif E(\gamma)[W] &= \langle \dot \gamma, \dot W  \rangle_{L^2(I,\R^N)} = \int_{\Sp^1} \langle \dot \gamma, D_\gamma W + \sff(\dot \gamma,W)\rangle \ \dif t \\
+		&= \int_{\Sp^1} \langle \dot \gamma, D_\gamma W\rangle  \ \dif t.
+	\end{align*}
+	
+\end{proof}
+
+\begin{oss}\label{oss: soluzioni deboli dell'equazione delle geodetiche}
+	I punti critici di \(E\) sono esattamente le soluzioni deboli dell'equazione delle geodetiche o, in altre parole, l'equazione delle geodetiche è l'\textit{equazione di Eulero-Lagrange} associato al funzionale energia. Infatti, se \(\gamma \in C^2(\Sp^1,M) \) è un punto critico di \(E\), allora per ogni \(W \in \T(\gamma) \cap T_\gamma H^1(\Sp^1,M)\)
+	\[
+	 0=\int_{\Sp^1} \langle D_\gamma W, \dot \gamma \rangle \ \dif t = - \int_{\Sp^1} \langle W, D_\gamma \dot \gamma \rangle \ \dif t
+	\]
+	e per il lemma fondamentale del calcolo delle variazioni \(D_\gamma \dot \gamma = 0\).
+	
+\end{oss}
+
+\begin{lemma}\label{lemma: regolarità punti critici di E}
+	I punti critici di \(E\) sono contenuti in \(C^\infty(\Sp^1,M)\).
+\end{lemma}
+\begin{proof}
+	Sia \(\gamma \in H^1(\Sp^1,M)\) un punto critico dell'energia. Verifichiamo che \(\gamma\) risolve l'equazione 
+	\[
+		\ddot \gamma = \sff(\dot \gamma,\dot \gamma)
+	\] 
+	in senso debole, cioè che per ogni \(v \in C^\infty_0(I,\R^N)\)
+	\begin{align*}
+		\int_0^1 \langle \dot \gamma, \dot v \rangle\ \dif t = - \int_0^1 \langle \sff(\dot \gamma,\dot\gamma), v \rangle \ \dif t.
+	\end{align*}
+	Siano \(\pi^\parallel\) e \(\pi^\perp\) la proiezione tangente e la proiezione ortogonale di \(H^1(\Sp^1,M) \subset H^1(\Sp^1,\R^N)\). Scomponendo \(v = \pi^\parallel_{\gamma}(v)+\pi^\perp_{\gamma}(v) = v^\parallel + v^\perp\) e applicando la (\ref{eq: Weingarten curve in M in R^N}) (che vale puntualmente quasi ovunque, indipendentemente dalla regolarità di \(\gamma\)),
+	\begin{align*}
+		\int_0^1 \langle \dot \gamma, \dot v \rangle \ \dif t &= \int_0^1 \left\langle \dot \gamma, \frac{\dif v^\parallel}{\dif t} \right\rangle \ \dif t +\int_0^1\left \langle \dot \gamma, \frac{\dif v^\perp}{\dif t} \right\rangle \ \dif t  \\
+		&=-\int_0^1 \langle \sff(\dot \gamma,\dot \gamma), v^\perp \rangle \ \dif t \\
+		&=-\int_0^1 \langle \sff(\dot \gamma,\dot \gamma), v\rangle \ \dif t.
+	\end{align*}
+	
+	Dunque \(\dot \gamma = \sff(\dot \gamma,\dot \gamma)\). Osserviamo che, siccome \(\dot \gamma \in L^2(I,\R^N)\), si ha \(\ddot \gamma = \sff(\dot \gamma,\dot \gamma) \in L^1(I)\). Infatti sia  \(E_1,\dots,E_N\) un frame ortonormale locale di \(\R^N\) definito su \(\gamma((t_0-\ve,t_0+\ve))\) e tale che \(E_1, \dots, E_n\) sia un frame ortonormale locale di \(M\); allora, usando ancora la (\ref{eq: Weingarten curve in M in R^N}),
+	\begin{align*}
+		\int_{t_0-\ve}^{t_0+\ve} \left| \sff(\dot \gamma, \dot \gamma) \right| \ \dif t &= \int_{t_0-\ve}^{t_0+\ve} \sqrt{\sum_{i=n+1}^N \langle \sff(\dot \gamma, \dot \gamma), E_i \rangle^2} \ \dif t \\
+			&\leq \sum_{i=n+1}^N \int_{t_0-\ve}^{t_0+\ve} \left| \langle \sff(\dot \gamma, \dot \gamma), E_i \rangle \right| \ \dif t \\
+			&= \sum_{i=n+1}^N \int_{t_0-\ve}^{t_0+\ve} \left| \langle \dot \gamma, \dot E_i \rangle \right| \ \dif t \\
+			& \leq \sum_{i=n+1}^N \|\dot \gamma \|_{L^2} \|\dot E_i \|_{L^2} < + \infty.
+	\end{align*}
+	Siccome \(\gamma(I)\) è compatto, basta sommare questa stima su un numero finito di punti di \(\Sp^1\) per ottenere \(\|\sff(\dot \gamma, \dot \gamma)\|_{L^1(I, \R^N)} < +\infty\).
+	
+	Dunque \(\dot \gamma \in W^{1,1}(I,\R^N) \hookrightarrow C^0(I,\R^N)\) per il Teorema~\ref{teo: immersione di Sobolev}. Allora anche \(\sff(\dot \gamma,\dot \gamma)\) è continuo, e quindi \(\ddot \gamma \in C^0(I,\R^N)\). Dunque \(\gamma \in C^2(I,\R^N)\) e, in ogni carta, risolve l'equazione delle geodetiche (\ref{eq: equazione geodetiche}), quindi per il Teorema~\ref{teo: esistenza e unicità locale sol pbm Cauchy} \(\gamma \in C^\infty(I,M)\). Per concludere che \(\gamma \in C^\infty(\Sp^1,M)\), basta applicare lo stesso ragionamento alla curva
+	\[
+		t \mapsto \gamma(t + 1/2).
+	\] 
+\end{proof}
+
+\begin{teo}\label{teo: punto critico energia se e solo se geodetica}
+	Una curva \(\gamma \in H^1(\Sp^1,M)\) è un punto critico dell'energia se e solo se è una geodetica (possibilmente costante).
+\end{teo}
+\begin{proof}
+	Grazie al Lemma~\ref{lemma: regolarità punti critici di E}, i punti critici di \(E\) sono tutte e sole le curve \(\gamma \in C^\infty(\Sp^1,M)\) che soddisfano l'equazione delle geodetiche. Concludiamo con l'Osservazione~\ref{oss: soluzioni deboli dell'equazione delle geodetiche}.
+\end{proof}

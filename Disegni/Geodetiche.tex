@@ -1,0 +1,35 @@
+	
+	\begin{figure}[ht]
+		\centering
+		\begin{tikzpicture}
+			%\draw[help lines] (-6,-3) grid (6,3);
+			
+			%FIGURA PIANO
+			\draw[thick] (-6,-2) rectangle (-1,2);
+			\node at (-4.7,1.5){\(\R^2 \setminus\{(0,0)\}\)};
+			\fill (-5,-1) circle (1.5 pt)
+				(-2,1) circle (1.5 pt);
+			\draw (-3.5,0) circle (1.5 pt);
+			\node at (-5.2,-1.2){\(p\)};
+			\node at (-1.8,1.2){\(q\)};
+			\draw[dashed](-5,-1) --(-3.6,-0.07);
+			\draw[dashed](-3.4,0.07) -- (-2,1);
+			\draw[use Hobby shortcut, thick](-5,-1) .. (-3.5 - 0.158,0.475) .. (-2,1);
+			
+			%FIGURA SFERA
+			\draw [thick] (4,0) circle (2);
+			\draw (2,0) arc (180:360: 2 and 0.55);
+			\draw [dashed] (6,0) arc (0:180: 2 and 0.55);
+			\fill (4,2) circle (1.5pt)
+				(4,-2) circle (1.5pt);
+			\node at (4,2.4){\(N\)};
+			\node at (4,-2.4){\(S\)};
+			\node at (6,1.5){\(\Sp^2\)};
+			\draw[thick] (4,0) ellipse (1.55 and 2);
+			\draw[thick] (4,0) ellipse (0.9 and 2);
+			\draw[thick] (4,0) ellipse (0.3 and 2);
+		\end{tikzpicture}
+		\caption{Il problema della curva di lunghezza minima tra quelle che connettono due punti. A sinistra un caso in cui non esiste la soluzione, a destra un caso in cui la soluzione non è unica.}
+		\label{fig: esistenza e unicità geodetiche}
+	\end{figure}
+	

@@ -1,0 +1,33 @@
+%MODELLI 2
+
+\begin{figure}[h]
+	\centering
+\begin{tikzpicture}
+	%\draw [help lines] (-3,-4) grid (9,4);
+	
+	%SFERA
+	%linee
+	\draw [thick] (0,0) circle (2);
+	\draw [thick, blue] (-2,0) arc (180:360: 2 and 0.55);
+	\draw [thick,blue,dashed] (2,0) arc (0:180: 2 and 0.55);
+	
+	
+	
+	
+	
+	%TORO
+	%linee
+	\draw[thick] (6,0) ellipse (2.5 and 1.5);
+	\begin{scope}
+		\clip (6,-1.8) ellipse (2.5 and 2.5);
+		\draw[thick] (6,2.2) ellipse (2.5 and 2.5);
+	\end{scope}
+	\begin{scope}
+		\clip(6,2.2) ellipse (2.5 and 2.5);
+		\draw[thick] (6,-2.2) ellipse (2.5 and 2.5);
+	\end{scope}
+	
+	
+\end{tikzpicture}
+
+\end{figure}

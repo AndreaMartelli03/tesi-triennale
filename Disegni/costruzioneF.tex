@@ -1,0 +1,66 @@
+%COSTRUZIONE DI F
+\begin{figure}[h]
+	\centering
+	\begin{tikzpicture}[decoration={markings, mark=at position 0.5 with {\arrow[]{>}}}]
+		%\draw [help lines] (-3,-4) grid (10,4);
+		
+		% DOMINIO
+		%linee
+		\draw [thick] (0,0) circle (2);
+		\draw (-2,0) arc (180:360: 2 and 0.55);
+		\draw [dashed] (2,0) arc (0:180: 2 and 0.55);
+		\draw [very thick] (0,2) arc (90:270: 0.55 and 2);
+		\draw[thin,->] (0,0) -- (0,3);
+		\draw[thin,->] (0,0) -- (3,0);
+		\draw[thin,->] (0,0) -- (-2,-2);
+		\fill (0,2) circle (1.5pt)
+		(0,-2) circle (1.5pt);
+		\draw [](-1.732,1) arc(180:360:1.732 and 0.3);
+		\draw [decorate](0,0.7) arc(270:360:1.732 and 0.3);
+		\draw [dashed](1.732,1) arc (0:180:1.732 and 0.3);
+		\fill[] (-0.52,0.71) circle (1.5pt);
+		
+		%nomi
+		\node at(2,2.5){\(\Sp^{k+1}\)};
+		\node at (-2.2,-1.8) {\(x_0\)};
+		\node at (3,-0.3){\(x_1\)};
+		\node at (-0.4,2.8){\(z\)};
+		\node at (0,-1) {\(\D^k\)};
+		\node[] at (-0.7,0.9) {\(x\)};
+		\node[] at  (1,1) {\(\gamma_x\)};
+		
+		
+		
+		
+		%freccina
+		\draw[thick,->](3,1) to[out=20, in=160](5,1);
+		\node at (4,1.5){\(f\)};
+		
+		
+		%CODOMINIO
+		%linee
+		\draw[thick] (6,0) to [out=250, in=90] (5.1,-2) to [out=270, in=180](7,-2.5)to [out=0,in=290](8.5,-1) to[out=110,in=260] (8.5,0) to [out=80,in=250] (9,1) to[out=70,in=0](7.5,2.2) to[out=180,in=100] (6,1) to[out=280,in=70](6,0);
+		\draw(6,0) to[out=290,in=170](7,-0.4) to [out=350,in=250](8.5,0);
+		\draw[dashed](8.5,0) to[out=70,in=10] (7.5,0.2) to[out=190,in=60] (6,0);
+		\fill (7.5,2) circle (1.5pt)
+		(6.5,-2.5) circle (1.5pt);
+		\draw [very thick] (6.5,-2.5)to[out=160,in=265](6.2,-2) to[out=85,in=270](6.9,0) to[out=90,in=270](6.8,1) to[out=90,in=215](7.5,2);
+		\draw [](6,1) to[out=290,in=170](6.82,0.68) to[out=350, in=210](8,0.8) to [out=30,in=250](9,1);
+		\draw[decorate](8,0.8) to [out=30,in=250](9,1);
+		\draw[dashed](9,1) to[out=70,in=10] (7.8,1.5) to[out=190,in=60] (6,1);
+		\fill[] (6.82,0.68) circle (1.5pt);
+		
+		%nomi
+		\node at (6,2.5) {\(f(\Sp^{k+1})\subset M\)};
+		\node at (7,-1.5){\(f(\D^k)\)};
+		\node [] at(7.3,1){\(f(x)\)};
+		\node [] at (8.5,0.4) {\(f \circ \gamma_x = f_*(x) \)};
+		
+		
+	\end{tikzpicture}
+	
+	\caption{Costruzione dell'identificazione \(C^\infty(\Sp^{k+1},M) \to \mathcal{F}\).}
+	
+	\label{fig: costruzione di F}
+	
+\end{figure}

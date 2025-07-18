@@ -1,0 +1,38 @@
+
+
+
+\begin{figure}[h]
+	\centering
+	\begin{tikzpicture}[
+		%decoration={markings, mark=at position 0.5 with {\arrow[OliveGreen]{>}}}, 
+		scale=0.6]
+		%\draw [help lines] (-3,-4) grid (10,4);
+
+		\tikzset{mid arrow/.style={postaction={decorate,decoration={
+						markings,
+						mark=at position 0.5 with {\arrow{stealth}}
+			}}}
+		}
+		
+		%linee
+		\draw [thick] (0,0) circle (2);
+		\draw[thick,OliveGreen, mid arrow] (-2,0) arc (180:360: 2 and 0.55);
+		%\draw[decorate] (-2,0) arc (180:360: 2 and 0.55);
+		\draw [OliveGreen, dashed] (2,0) arc (0:180: 2 and 0.55);
+		%\draw[thin,->] (0,0) -- (0,3);
+		%\draw[thin,->] (0,0) -- (3,0);
+		%\draw[thin,->] (0,0) -- (-2.3,-1.5);
+		\draw [thick,OliveGreen, mid arrow](-1.908,0.6) arc(180:360:1.908 and 0.3);
+		%\draw [decorate](-1.908,0.6) arc(180:360:1.908 and 0.3);
+		\draw [OliveGreen, dashed](1.908,0.6) arc(0:180:1.908 and 0.3);
+		
+		%nomi
+		\node at(2,2){\(\Sp^{2}\)};
+		%\node at (-2.2,-1.9) {\(x\)};
+		%\node at (3,-0.4){\(y\)};
+		%\node at (-0.4,2.8){\(z\)};
+		\node[OliveGreen] at  (2.5,-.2) {\(\gamma_0\)};
+		\node[OliveGreen] at  (2.5,.6) {\(\gamma_s\)};
+		
+	\end{tikzpicture}
+\end{figure}

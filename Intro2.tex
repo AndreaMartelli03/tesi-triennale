@@ -1,0 +1,21 @@
+%INTRODUZIONE
+
+Il metodo diretto del calcolo delle variazioni è una tecnica molto utile per dimostrare l'esistenza di punti di minimo o di massimo di un funzionale, ma non permette di individuare i punti di ‘‘sella''. In queste situazioni può risultare una strategia efficace utilizzare i metodi di min-max, di cui il prototipo è il teorema di passo montano di A. Ambrosetti e P. Rabinowitz \cite{ambrosetti1973dual}.
+
+Questo elaborato indaga un esempio del genere presentando una dimostrazione, tratta da \cite{klingenberg1995riemannian}, del teorema di L. Lusternik e A. Fet \cite{lusternik1951variational}:
+\begin{teoLF}[Lusternik-Fet, 1951]
+	Ogni varietà Riemanniana chiusa ammette una geodetica chiusa non costante. 
+\end{teoLF}
+Se la varietà non è semplicemente connessa è possibile applicare il metodo diretto del calcolo delle variazioni per trovare delle geodetiche come punti di minimo locale del funzionale energia (cf. Sezione~\ref{sez: non semplicemente connesso}); se la varietà è semplicemente connessa adotteremo dei metodi di min-max (cf. Sezione~\ref{sez: semplicemente connesso}). 
+
+Il primo caso, nel quale è possibile minimizzare localmente l'energia, era già stato risolto nel 1898 da J. Hadamard in \cite{hadamard1898surfaces}. Il secondo, molto più delicato, è stato risolto per la prima volta da G.D. Birkhoff nel 1917 nel caso particolare delle superfici (a meno di omeomorfismi, l'unica superficie chiusa e semplicemente connessa è la sfera): la dimostrazione è uno dei primi esempi di procedimenti di min-max. Infine, nel 1951 Lusternik e Fet hanno dimostrato il teorema per tutte le varietà chiuse. 
+
+Con l'intento di rendere più chiaro l'utilizzo di tutti gli strumenti variazionali, ho scelto un approccio estrinseco, cioè ho assunto quasi sempre che la varietà sia una sottovarietà di uno spazio euclideo piatto di dimensione alta. Trattando solo varietà differenziabili  \(C^\infty\), in virtù del teorema di embedding isometrico liscio di Nash \cite{nash1956imbedding}, questa non è un'ipotesi restrittiva. Tuttavia, è possibile seguire un approccio completamente intrinseco (si veda \cite{klingenberg1995riemannian} oppure \cite{klingenberg2012lectures}).
+
+Il primo capitolo è una rapida introduzione alle geodetiche di una varietà Riemanniana, basata soprattutto su \cite{milnor1963morse}, con una parentesi sulle sottovarietà Riemanniane nella terza sezione, tratta da \cite{lee1997riemannian}. L'intenzione è di fissare il linguaggio geometrico per la dimostrazione del teorema di Lusternik-Fet.
+
+Il secondo capitolo introduce lo spazio e il funzionale adatto ad affrontare la dimostrazione del teorema di Lusternik-Fet utilizzando le opportune tecniche di calcolo delle variazioni: lo spazio \(H^1(\Sp^1,M)\) delle curve chiuse di classe \(H^1\) e il funzionale energia \(E\).
+
+Il terzo capitolo è dedicato al teorema di passo montano: la prima sezione su spazi di Hilbert, la seconda sullo spazio \(H^1(\Sp^1,M)\) con funzionale energia. 
+
+Le prime due sezioni del quarto capitolo trattano la dimostrazione del teorema di Lusternik-Fet. L'ultima sezione è una rapida lista di alcuni risultati di esistenza di geodetiche e ipersuperfici minime, associati al teorema di Lusternik-Fet sia per il contenuto geometrico che per le tecniche di min-max usate nelle dimostrazioni.
