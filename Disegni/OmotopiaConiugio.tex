@@ -1,0 +1,94 @@
+
+% OMOTOPIA CONIUGIO	
+	
+	\begin{figure}[h]
+	\centering
+	\begin{tikzpicture}[decoration={markings, mark=at position 0.5 with {\arrow{>}}}]
+		%PRIMO DISEGNO
+		%disegno primo quadrato
+		\draw [thick,postaction={decorate}] (0,0) -- (0,4);
+		\draw [thick,postaction={decorate}] (4,4) -- (4,0);
+		\draw [thick, postaction={decorate}] (0,0) -- (4/3,0);
+		\draw [thick, postaction={decorate}] (4/3,0) -- (8/3,0);
+		\draw [thick, postaction={decorate}] (8/3,0) -- (4,0);
+		\draw [thick, postaction={decorate}] (0,4) -- (4/3,4);
+		\draw [thick, postaction={decorate}] (4/3,4) -- (8/3,4);
+		\draw [thick, postaction={decorate}] (8/3,4) -- (4,4);
+		
+		%disegno linee in mezzo
+		\draw[thick] (4/3,0)--(4/3,4);
+		\draw[thick] (8/3,0)--(8/3,4);					
+		
+		%nomi			
+		\node at (-0.3,2) {$\rho$};
+		\node at (4.3,2) {$\overline{\rho}$};	
+		\node at (2/3,-0.3) {$\sigma$};
+		\node at (2,-0.3) {$\gamma$};
+		\node at (4-2/3,-0.3) {$\overline{\sigma}$};			
+		\node at (2/3,4.3) {$\tau$};
+		\node at (2,4.3) {$\gamma$};
+		\node at (4-2/3,4.3) {$\overline{\tau}$};
+		\node at (2/3,2) {$K$};			
+		\node at (4-2/3,2) {$\overline{K}$};	
+		\node at (2,2) {$\gamma \circ pr_1$};		
+		\node at (-0.2,-0.2) {\(p\)};
+		\node at (-0.2,4.2) {\(p\)};						
+		\node at (4.2,-0.2) {\(p\)};
+		\node at (4.2,4.2) {\(p\)};
+		\node at (4/3,-0.3) {\(q\)};
+		\node at (8/3,-0.3) {\(q\)};
+		\node at (4/3,4.3) {\(q\)};
+		\node at (8/3,4.3) {\(q\)};
+		
+		%VUOTO
+		\draw[thick,->](4.8,2)--(5.5,2);
+		
+		%SECONDO DISEGNO
+		%disegno secondo quadrato
+		\draw [thick] (6,0) -- (6,4);
+		\draw [thick] (10,0) -- (10,4);
+		\draw [thick, postaction={decorate}] (6,0) -- (6+4/3,0);
+		\draw [thick, postaction={decorate}] (6+4/3,0) -- (6+8/3,0);
+		\draw [thick, postaction={decorate}] (6+8/3,0) -- (6+4,0);
+		\draw [thick, postaction={decorate}] (6,4) -- (6+4/5,4);
+		\draw [thick, postaction={decorate}] (6+4/5,4) -- (6+8/5,4);
+		\draw [thick, postaction={decorate}] (6+8/5,4) -- (6+12/5,4);
+		\draw [thick, postaction={decorate}] (6+12/5,4) -- (6+16/5,4);
+		\draw [thick, postaction={decorate}] (6+16/5,4) -- (10,4);			
+		
+		%disegno linee in mezzo
+		\draw[thick] (4/3+6,0)--(8/5+6,4);			
+		\draw[thick] (8/3+6,0)--(12/5+6,4);
+		\draw[thick] (6+4/5,4.05)--(6+4/5,3.95);			
+		\draw[thick] (6+16/5,4.05)--(6+16/5,3.95);	
+		
+		%nomi
+		\node at (6+2/3,-0.3) {$\sigma$};
+		\node at (6+2,-0.3) {$\gamma$};
+		\node at (6+4-2/3,-0.3) {$\overline{\sigma}$};	
+		\node at (6+2/3,2) {$K'$};			
+		\node at (6+4-2/3,2) {$\overline{K'}$};	
+		\node at (6+2,1) {$\gamma \circ pr_1$};	
+		\node at (6+4/10,4.3) {\(\rho\)};
+		\node at (6+12/10,4.3) {\(\tau\)};
+		\node at (6+20/10,4.3) {\(\gamma\)};
+		\node at (6+28/10,4.3) {\(\overline{\tau}\)};
+		\node at (6+36/10,4.3) {\(\overline{\rho}\)};
+		\node at (6-0.2,-0.2) {\(p\)};
+		\node at (6-0.2,4.2) {\(p\)};
+		\node at (6+4/5,4.3) {\(p\)};												
+		\node at (6+4.2,-0.2) {\(p\)};
+		\node at (10-4/5,4.3) {\(p\)};
+		\node at (6+4.2,4.2) {\(p\)};	
+		\node at (6+4/3,-0.3) {\(q\)};
+		\node at (6+8/3,-0.3) {\(q\)};
+		\node at (6+8/5,4.3) {\(q\)};
+		\node at (6+12/5,4.3) {\(q\)};				
+	\end{tikzpicture}
+	
+	\caption{Il primo quadrato è la concatenazione delle omotopie \(K\) tra \(\sigma\) e \(\tau\), \(\gamma \circ pr_1\) di \(\gamma\) con se stessa (\(pr_1:\Sp^1\times[0,1]\to\Sp^1\) è la proiezione sul primo fattore) e \(\overline{K}\) tra \(\overline{\sigma}\) e \(\overline{\tau}\), ottenuta specchiando \(K\).
+		Per passare dal primo quadrato al secondo quadrato, basta notare che \(K\) induce un'omotopia relativa a \(\{0,1\}\)  \(K'\) tra \(\sigma\) e \(\rho * \tau\).}
+	
+	\label{fig: coniugio}
+	
+\end{figure}

@@ -1,0 +1,22 @@
+\begin{figure}[h]
+	\centering
+	\begin{tikzpicture}
+		
+		\draw[thick](-3.5,0) to [out=90, in=180](-2.5,1) to  [out=0,in=180](-1,.5) to [out=0,in=180] (0,1) to  [out=0,in=180](1,.5) to  [out=0,in=180](2.5,1) to[out=0, in=90] (3.5,0) 
+		to[out=270, in=0] (2,-1.5) to [out=180,in=0](0,-.5) to [out=180,in=0](-2,-1.5) to [out=180, in=270](-3.5,0);
+		
+		\tikzset{mid arrow/.style={postaction={decorate,decoration={
+						markings,
+						mark=at position 0.5 with {\arrow{stealth}}
+			}}}
+		}
+		
+		\draw[thick,OliveGreen, mid arrow] (-1,.5) to[out=-80, in=180] (0,-.5);
+		\draw[OliveGreen, dashed, mid arrow] (0,-.5)to [out=20, in=190](1,.5) ;
+		\draw[thick, OliveGreen, mid arrow] (1,.5) to [out=260, in =0](0,-.5);
+		\draw[OliveGreen, dashed, mid arrow] (0,-.5) to [out=160,in=-10](-1,.5);
+
+	\end{tikzpicture}
+
+	
+\end{figure}

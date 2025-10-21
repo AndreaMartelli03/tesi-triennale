@@ -1,0 +1,1184 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.3 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{nty/global//global/global/global}
+    \entry{abate2011geometria}{book}{}{}
+      \name{author}{2}{}{%
+        {{hash=94324ab48bb5e1487b3cf6df25b5e301}{%
+           family={Abate},
+           familyi={A\bibinitperiod},
+           given={Marco},
+           giveni={M\bibinitperiod}}}%
+        {{hash=0b55466a201ce77f742c52e2829b4fa8}{%
+           family={Tovena},
+           familyi={T\bibinitperiod},
+           given={Francesca},
+           giveni={F\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Springer, Milan}%
+      }
+      \strng{namehash}{69eec2008394a08f1fd3b31b841aa43b}
+      \strng{fullhash}{69eec2008394a08f1fd3b31b841aa43b}
+      \strng{fullhashraw}{69eec2008394a08f1fd3b31b841aa43b}
+      \strng{bibnamehash}{69eec2008394a08f1fd3b31b841aa43b}
+      \strng{authorbibnamehash}{69eec2008394a08f1fd3b31b841aa43b}
+      \strng{authornamehash}{69eec2008394a08f1fd3b31b841aa43b}
+      \strng{authorfullhash}{69eec2008394a08f1fd3b31b841aa43b}
+      \strng{authorfullhashraw}{69eec2008394a08f1fd3b31b841aa43b}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{La Matematica per il 3+2}
+      \field{series}{Unitext}
+      \field{title}{Geometria differenziale}
+      \field{volume}{54}
+      \field{year}{2011}
+      \verb{doi}
+      \verb 10.1007/978-88-470-1920-1
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1007/978-88-470-1920-1
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1007/978-88-470-1920-1
+      \endverb
+    \endentry
+    \entry{ambrosetti1967esistenza}{article}{}{}
+      \name{author}{1}{}{%
+        {{hash=e70ebef8e2f3e0716a1fd5dc52aa218d}{%
+           family={Ambrosetti},
+           familyi={A\bibinitperiod},
+           given={Antonio},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{e70ebef8e2f3e0716a1fd5dc52aa218d}
+      \strng{fullhash}{e70ebef8e2f3e0716a1fd5dc52aa218d}
+      \strng{fullhashraw}{e70ebef8e2f3e0716a1fd5dc52aa218d}
+      \strng{bibnamehash}{e70ebef8e2f3e0716a1fd5dc52aa218d}
+      \strng{authorbibnamehash}{e70ebef8e2f3e0716a1fd5dc52aa218d}
+      \strng{authornamehash}{e70ebef8e2f3e0716a1fd5dc52aa218d}
+      \strng{authorfullhash}{e70ebef8e2f3e0716a1fd5dc52aa218d}
+      \strng{authorfullhashraw}{e70ebef8e2f3e0716a1fd5dc52aa218d}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0041-8994}
+      \field{journaltitle}{Rend. Sem. Mat. Univ. Padova}
+      \field{title}{Un teorema di esistenza per le equazioni differenziali negli spazi di {B}anach}
+      \field{volume}{39}
+      \field{year}{1967}
+      \field{pages}{349\bibrangedash 361}
+      \range{pages}{13}
+      \verb{urlraw}
+      \verb http://www.numdam.org/item?id=RSMUP_1967__39__349_0
+      \endverb
+      \verb{url}
+      \verb http://www.numdam.org/item?id=RSMUP_1967__39__349_0
+      \endverb
+    \endentry
+    \entry{ambrosetti2007nonlinear}{book}{}{}
+      \name{author}{2}{}{%
+        {{hash=e70ebef8e2f3e0716a1fd5dc52aa218d}{%
+           family={Ambrosetti},
+           familyi={A\bibinitperiod},
+           given={Antonio},
+           giveni={A\bibinitperiod}}}%
+        {{hash=ca2af4a60b9f032d85b4af70b674747f}{%
+           family={Malchiodi},
+           familyi={M\bibinitperiod},
+           given={Andrea},
+           giveni={A\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Cambridge University Press, Cambridge}%
+      }
+      \strng{namehash}{9166b29970c06ca784f937d65132283c}
+      \strng{fullhash}{9166b29970c06ca784f937d65132283c}
+      \strng{fullhashraw}{9166b29970c06ca784f937d65132283c}
+      \strng{bibnamehash}{9166b29970c06ca784f937d65132283c}
+      \strng{authorbibnamehash}{9166b29970c06ca784f937d65132283c}
+      \strng{authornamehash}{9166b29970c06ca784f937d65132283c}
+      \strng{authorfullhash}{9166b29970c06ca784f937d65132283c}
+      \strng{authorfullhashraw}{9166b29970c06ca784f937d65132283c}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{series}{Cambridge Studies in Advanced Mathematics}
+      \field{title}{Nonlinear analysis and semilinear elliptic problems}
+      \field{volume}{104}
+      \field{year}{2007}
+      \verb{doi}
+      \verb 10.1017/CBO9780511618260
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1017/CBO9780511618260
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1017/CBO9780511618260
+      \endverb
+    \endentry
+    \entry{ambrosetti1973dual}{article}{}{}
+      \name{author}{2}{}{%
+        {{hash=e70ebef8e2f3e0716a1fd5dc52aa218d}{%
+           family={Ambrosetti},
+           familyi={A\bibinitperiod},
+           given={Antonio},
+           giveni={A\bibinitperiod}}}%
+        {{hash=b36d8d376c1b217ca6714f844190b6d1}{%
+           family={Rabinowitz},
+           familyi={R\bibinitperiod},
+           given={Paul\bibnamedelima H.},
+           giveni={P\bibinitperiod\bibinitdelim H\bibinitperiod}}}%
+      }
+      \strng{namehash}{78f7d2a390b6ab82563c77bbe5671365}
+      \strng{fullhash}{78f7d2a390b6ab82563c77bbe5671365}
+      \strng{fullhashraw}{78f7d2a390b6ab82563c77bbe5671365}
+      \strng{bibnamehash}{78f7d2a390b6ab82563c77bbe5671365}
+      \strng{authorbibnamehash}{78f7d2a390b6ab82563c77bbe5671365}
+      \strng{authornamehash}{78f7d2a390b6ab82563c77bbe5671365}
+      \strng{authorfullhash}{78f7d2a390b6ab82563c77bbe5671365}
+      \strng{authorfullhashraw}{78f7d2a390b6ab82563c77bbe5671365}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0022-1236}
+      \field{journaltitle}{J. Functional Analysis}
+      \field{title}{Dual variational methods in critical point theory and applications}
+      \field{volume}{14}
+      \field{year}{1973}
+      \field{pages}{349\bibrangedash 381}
+      \range{pages}{33}
+      \verb{doi}
+      \verb 10.1016/0022-1236(73)90051-7
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1016/0022-1236(73)90051-7
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1016/0022-1236(73)90051-7
+      \endverb
+    \endentry
+    \entry{birkhoff1917dynamical}{article}{}{}
+      \name{author}{1}{}{%
+        {{hash=e4c0ea374f31f95d419f731f01ce8013}{%
+           family={Birkhoff},
+           familyi={B\bibinitperiod},
+           given={George\bibnamedelima D.},
+           giveni={G\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
+      }
+      \strng{namehash}{e4c0ea374f31f95d419f731f01ce8013}
+      \strng{fullhash}{e4c0ea374f31f95d419f731f01ce8013}
+      \strng{fullhashraw}{e4c0ea374f31f95d419f731f01ce8013}
+      \strng{bibnamehash}{e4c0ea374f31f95d419f731f01ce8013}
+      \strng{authorbibnamehash}{e4c0ea374f31f95d419f731f01ce8013}
+      \strng{authornamehash}{e4c0ea374f31f95d419f731f01ce8013}
+      \strng{authorfullhash}{e4c0ea374f31f95d419f731f01ce8013}
+      \strng{authorfullhashraw}{e4c0ea374f31f95d419f731f01ce8013}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0002-9947,1088-6850}
+      \field{journaltitle}{Trans. Amer. Math. Soc.}
+      \field{number}{2}
+      \field{title}{Dynamical systems with two degrees of freedom}
+      \field{volume}{18}
+      \field{year}{1917}
+      \field{pages}{199\bibrangedash 300}
+      \range{pages}{102}
+      \verb{doi}
+      \verb 10.2307/1988861
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.2307/1988861
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.2307/1988861
+      \endverb
+    \endentry
+    \entry{brezis2011functional}{book}{}{}
+      \name{author}{1}{}{%
+        {{hash=31e0c25a6fb0297f0536bede27a04cd4}{%
+           family={Brezis},
+           familyi={B\bibinitperiod},
+           given={Haim},
+           giveni={H\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Springer, New York}%
+      }
+      \strng{namehash}{31e0c25a6fb0297f0536bede27a04cd4}
+      \strng{fullhash}{31e0c25a6fb0297f0536bede27a04cd4}
+      \strng{fullhashraw}{31e0c25a6fb0297f0536bede27a04cd4}
+      \strng{bibnamehash}{31e0c25a6fb0297f0536bede27a04cd4}
+      \strng{authorbibnamehash}{31e0c25a6fb0297f0536bede27a04cd4}
+      \strng{authornamehash}{31e0c25a6fb0297f0536bede27a04cd4}
+      \strng{authorfullhash}{31e0c25a6fb0297f0536bede27a04cd4}
+      \strng{authorfullhashraw}{31e0c25a6fb0297f0536bede27a04cd4}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{978-0-387-70913-0}
+      \field{series}{Universitext}
+      \field{title}{Functional analysis, {S}obolev spaces and partial differential equations}
+      \field{year}{2011}
+    \endentry
+    \entry{delellis2017masterpieces}{article}{}{}
+      \name{author}{1}{}{%
+        {{hash=57510188fd994b896045c5d459b82f8c}{%
+           family={De\bibnamedelima Lellis},
+           familyi={D\bibinitperiod\bibinitdelim L\bibinitperiod},
+           given={Camillo},
+           giveni={C\bibinitperiod}}}%
+      }
+      \name{editor}{2}{}{%
+        {{hash=d8ffad1db288b50aefd854029530e80b}{%
+           family={Holden},
+           familyi={H\bibinitperiod},
+           given={Helge},
+           giveni={H\bibinitperiod}}}%
+        {{hash=42047f15b7bdba674a8ccd7cdb50b7f7}{%
+           family={Piene},
+           familyi={P\bibinitperiod},
+           given={Ragni},
+           giveni={R\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Springer, Cham}%
+      }
+      \strng{namehash}{57510188fd994b896045c5d459b82f8c}
+      \strng{fullhash}{57510188fd994b896045c5d459b82f8c}
+      \strng{fullhashraw}{57510188fd994b896045c5d459b82f8c}
+      \strng{bibnamehash}{57510188fd994b896045c5d459b82f8c}
+      \strng{authorbibnamehash}{57510188fd994b896045c5d459b82f8c}
+      \strng{authornamehash}{57510188fd994b896045c5d459b82f8c}
+      \strng{authorfullhash}{57510188fd994b896045c5d459b82f8c}
+      \strng{authorfullhashraw}{57510188fd994b896045c5d459b82f8c}
+      \strng{editorbibnamehash}{d673464949fbac3d3d30292c27676834}
+      \strng{editornamehash}{d673464949fbac3d3d30292c27676834}
+      \strng{editorfullhash}{d673464949fbac3d3d30292c27676834}
+      \strng{editorfullhashraw}{d673464949fbac3d3d30292c27676834}
+      \field{extraname}{1}
+      \field{sortinit}{D}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{The {A}bel {P}rize 2013--2017}
+      \field{title}{The masterpieces of John Forbes Nash Jr}
+      \field{year}{2019}
+      \field{pages}{391\bibrangedash 499}
+      \range{pages}{109}
+    \endentry
+    \entry{delellis2015size}{incollection}{}{}
+      \name{author}{1}{}{%
+        {{hash=57510188fd994b896045c5d459b82f8c}{%
+           family={De\bibnamedelima Lellis},
+           familyi={D\bibinitperiod\bibinitdelim L\bibinitperiod},
+           given={Camillo},
+           giveni={C\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Int. Press, Somerville, MA}%
+      }
+      \strng{namehash}{57510188fd994b896045c5d459b82f8c}
+      \strng{fullhash}{57510188fd994b896045c5d459b82f8c}
+      \strng{fullhashraw}{57510188fd994b896045c5d459b82f8c}
+      \strng{bibnamehash}{57510188fd994b896045c5d459b82f8c}
+      \strng{authorbibnamehash}{57510188fd994b896045c5d459b82f8c}
+      \strng{authornamehash}{57510188fd994b896045c5d459b82f8c}
+      \strng{authorfullhash}{57510188fd994b896045c5d459b82f8c}
+      \strng{authorfullhashraw}{57510188fd994b896045c5d459b82f8c}
+      \field{extraname}{2}
+      \field{sortinit}{D}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Surveys in differential geometry 2016. {A}dvances in geometry and mathematical physics}
+      \field{series}{Surv. Differ. Geom.}
+      \field{title}{The size of the singular set of area-minimizing currents}
+      \field{volume}{21}
+      \field{year}{2016}
+      \field{pages}{1\bibrangedash 83}
+      \range{pages}{83}
+    \endentry
+    \entry{eells1958geometry}{incollection}{}{}
+      \name{author}{1}{}{%
+        {{hash=89d9cdad3a6cb0f0e07e3b9116718b96}{%
+           family={Eells},
+           familyi={E\bibinitperiod},
+           given={James},
+           giveni={J\bibinitperiod},
+           suffix={Jr.},
+           suffixi={J\bibinitperiod}}}%
+      }
+      \list{publisher}{2}{%
+        {Universidad Nacional Autónoma de México}%
+        {UNESCO, México}%
+      }
+      \strng{namehash}{89d9cdad3a6cb0f0e07e3b9116718b96}
+      \strng{fullhash}{89d9cdad3a6cb0f0e07e3b9116718b96}
+      \strng{fullhashraw}{89d9cdad3a6cb0f0e07e3b9116718b96}
+      \strng{bibnamehash}{89d9cdad3a6cb0f0e07e3b9116718b96}
+      \strng{authorbibnamehash}{89d9cdad3a6cb0f0e07e3b9116718b96}
+      \strng{authornamehash}{89d9cdad3a6cb0f0e07e3b9116718b96}
+      \strng{authorfullhash}{89d9cdad3a6cb0f0e07e3b9116718b96}
+      \strng{authorfullhashraw}{89d9cdad3a6cb0f0e07e3b9116718b96}
+      \field{sortinit}{E}
+      \field{sortinithash}{8da8a182d344d5b9047633dfc0cc9131}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Symposium internacional de topología algebraica {I}nternational symposium on algebraic topology}
+      \field{title}{On the geometry of function spaces}
+      \field{year}{1958}
+      \field{pages}{303\bibrangedash 308}
+      \range{pages}{6}
+    \endentry
+    \entry{hadamard1898surfaces}{article}{}{}
+      \name{author}{1}{}{%
+        {{hash=867a2303b0c6cc9d6fb2010bbc2f6fbe}{%
+           family={Hadamard},
+           familyi={H\bibinitperiod},
+           given={Jacques},
+           giveni={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{867a2303b0c6cc9d6fb2010bbc2f6fbe}
+      \strng{fullhash}{867a2303b0c6cc9d6fb2010bbc2f6fbe}
+      \strng{fullhashraw}{867a2303b0c6cc9d6fb2010bbc2f6fbe}
+      \strng{bibnamehash}{867a2303b0c6cc9d6fb2010bbc2f6fbe}
+      \strng{authorbibnamehash}{867a2303b0c6cc9d6fb2010bbc2f6fbe}
+      \strng{authornamehash}{867a2303b0c6cc9d6fb2010bbc2f6fbe}
+      \strng{authorfullhash}{867a2303b0c6cc9d6fb2010bbc2f6fbe}
+      \strng{authorfullhashraw}{867a2303b0c6cc9d6fb2010bbc2f6fbe}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0037-9484}
+      \field{journaltitle}{Bull. Soc. Math. France}
+      \field{title}{Sur la forme des lignes géodésiques à{} l'infini et sur les géodésiques des surfaces réglées du second ordre}
+      \field{volume}{26}
+      \field{year}{1898}
+      \field{pages}{195\bibrangedash 216}
+      \range{pages}{22}
+      \verb{urlraw}
+      \verb http://www.numdam.org/item?id=BSMF_1898__26__195_0
+      \endverb
+      \verb{url}
+      \verb http://www.numdam.org/item?id=BSMF_1898__26__195_0
+      \endverb
+    \endentry
+    \entry{hatcher2000algebraic}{book}{}{}
+      \name{author}{1}{}{%
+        {{hash=0a94eadf86d8b878d4c37bc5640e53e3}{%
+           family={Hatcher},
+           familyi={H\bibinitperiod},
+           given={Allen},
+           giveni={A\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Cambridge University Press, Cambridge}%
+      }
+      \strng{namehash}{0a94eadf86d8b878d4c37bc5640e53e3}
+      \strng{fullhash}{0a94eadf86d8b878d4c37bc5640e53e3}
+      \strng{fullhashraw}{0a94eadf86d8b878d4c37bc5640e53e3}
+      \strng{bibnamehash}{0a94eadf86d8b878d4c37bc5640e53e3}
+      \strng{authorbibnamehash}{0a94eadf86d8b878d4c37bc5640e53e3}
+      \strng{authornamehash}{0a94eadf86d8b878d4c37bc5640e53e3}
+      \strng{authorfullhash}{0a94eadf86d8b878d4c37bc5640e53e3}
+      \strng{authorfullhashraw}{0a94eadf86d8b878d4c37bc5640e53e3}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Algebraic topology}
+      \field{year}{2002}
+    \endentry
+    \entry{irie2018densityminimalhypersurfacesgeneric}{article}{}{}
+      \name{author}{3}{}{%
+        {{hash=8590b1d297d1119629412374d44fc15a}{%
+           family={Irie},
+           familyi={I\bibinitperiod},
+           given={Kei},
+           giveni={K\bibinitperiod}}}%
+        {{hash=a8c0bb3ddc1671524f2edbfe8373172b}{%
+           family={Marques},
+           familyi={M\bibinitperiod},
+           given={Fernando\bibnamedelima C.},
+           giveni={F\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+        {{hash=e8d1ffebd0f870fb08da00f8120be319}{%
+           family={Neves},
+           familyi={N\bibinitperiod},
+           given={André},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{8bf40090173532d361c4176769259c5c}
+      \strng{fullhash}{8bf40090173532d361c4176769259c5c}
+      \strng{fullhashraw}{8bf40090173532d361c4176769259c5c}
+      \strng{bibnamehash}{8bf40090173532d361c4176769259c5c}
+      \strng{authorbibnamehash}{8bf40090173532d361c4176769259c5c}
+      \strng{authornamehash}{8bf40090173532d361c4176769259c5c}
+      \strng{authorfullhash}{8bf40090173532d361c4176769259c5c}
+      \strng{authorfullhashraw}{8bf40090173532d361c4176769259c5c}
+      \field{sortinit}{I}
+      \field{sortinithash}{8d291c51ee89b6cd86bf5379f0b151d8}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0003-486X,1939-8980}
+      \field{journaltitle}{Ann. of Math. (2)}
+      \field{number}{3}
+      \field{title}{Density of minimal hypersurfaces for generic metrics}
+      \field{volume}{187}
+      \field{year}{2018}
+      \field{pages}{963\bibrangedash 972}
+      \range{pages}{10}
+      \verb{doi}
+      \verb 10.4007/annals.2018.187.3.8
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.4007/annals.2018.187.3.8
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.4007/annals.2018.187.3.8
+      \endverb
+    \endentry
+    \entry{klingenberg2012lectures}{book}{}{}
+      \name{author}{1}{}{%
+        {{hash=31283dbaa9a9e1b828c313f42e0bafc2}{%
+           family={Klingenberg},
+           familyi={K\bibinitperiod},
+           given={Wilhelm\bibnamedelimb P.\bibnamedelimi A.},
+           giveni={W\bibinitperiod\bibinitdelim P\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Springer-Verlag, Berlin-New York}%
+      }
+      \strng{namehash}{31283dbaa9a9e1b828c313f42e0bafc2}
+      \strng{fullhash}{31283dbaa9a9e1b828c313f42e0bafc2}
+      \strng{fullhashraw}{31283dbaa9a9e1b828c313f42e0bafc2}
+      \strng{bibnamehash}{31283dbaa9a9e1b828c313f42e0bafc2}
+      \strng{authorbibnamehash}{31283dbaa9a9e1b828c313f42e0bafc2}
+      \strng{authornamehash}{31283dbaa9a9e1b828c313f42e0bafc2}
+      \strng{authorfullhash}{31283dbaa9a9e1b828c313f42e0bafc2}
+      \strng{authorfullhashraw}{31283dbaa9a9e1b828c313f42e0bafc2}
+      \field{extraname}{1}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{3-540-08393-6}
+      \field{series}{Grundlehren der Mathematischen Wissenschaften}
+      \field{title}{Lectures on closed geodesics}
+      \field{volume}{Vol. 230}
+      \field{year}{1978}
+    \endentry
+    \entry{klingenberg1995riemannian}{book}{}{}
+      \name{author}{1}{}{%
+        {{hash=31283dbaa9a9e1b828c313f42e0bafc2}{%
+           family={Klingenberg},
+           familyi={K\bibinitperiod},
+           given={Wilhelm\bibnamedelimb P.\bibnamedelimi A.},
+           giveni={W\bibinitperiod\bibinitdelim P\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Walter de Gruyter \& Co., Berlin}%
+      }
+      \strng{namehash}{31283dbaa9a9e1b828c313f42e0bafc2}
+      \strng{fullhash}{31283dbaa9a9e1b828c313f42e0bafc2}
+      \strng{fullhashraw}{31283dbaa9a9e1b828c313f42e0bafc2}
+      \strng{bibnamehash}{31283dbaa9a9e1b828c313f42e0bafc2}
+      \strng{authorbibnamehash}{31283dbaa9a9e1b828c313f42e0bafc2}
+      \strng{authornamehash}{31283dbaa9a9e1b828c313f42e0bafc2}
+      \strng{authorfullhash}{31283dbaa9a9e1b828c313f42e0bafc2}
+      \strng{authorfullhashraw}{31283dbaa9a9e1b828c313f42e0bafc2}
+      \field{extraname}{2}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{Second}
+      \field{isbn}{3-11-014593-6}
+      \field{series}{De Gruyter Studies in Mathematics}
+      \field{title}{Riemannian geometry}
+      \field{volume}{1}
+      \field{year}{1995}
+      \verb{doi}
+      \verb 10.1515/9783110905120
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1515/9783110905120
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1515/9783110905120
+      \endverb
+    \endentry
+    \entry{lang2001fundamentals}{book}{}{}
+      \name{author}{1}{}{%
+        {{hash=88c92ddced8d93c4ed4df52ee477b0c6}{%
+           family={Lang},
+           familyi={L\bibinitperiod},
+           given={Serge},
+           giveni={S\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Springer-Verlag, New York}%
+      }
+      \strng{namehash}{88c92ddced8d93c4ed4df52ee477b0c6}
+      \strng{fullhash}{88c92ddced8d93c4ed4df52ee477b0c6}
+      \strng{fullhashraw}{88c92ddced8d93c4ed4df52ee477b0c6}
+      \strng{bibnamehash}{88c92ddced8d93c4ed4df52ee477b0c6}
+      \strng{authorbibnamehash}{88c92ddced8d93c4ed4df52ee477b0c6}
+      \strng{authornamehash}{88c92ddced8d93c4ed4df52ee477b0c6}
+      \strng{authorfullhash}{88c92ddced8d93c4ed4df52ee477b0c6}
+      \strng{authorfullhashraw}{88c92ddced8d93c4ed4df52ee477b0c6}
+      \field{sortinit}{L}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{0-387-98593-X}
+      \field{series}{Graduate Texts in Mathematics}
+      \field{title}{Fundamentals of differential geometry}
+      \field{volume}{191}
+      \field{year}{1999}
+      \verb{doi}
+      \verb 10.1007/978-1-4612-0541-8
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1007/978-1-4612-0541-8
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1007/978-1-4612-0541-8
+      \endverb
+    \endentry
+    \entry{lee2012smooth}{book}{}{}
+      \name{author}{1}{}{%
+        {{hash=36896354ee3aedc1a13d683ea773634e}{%
+           family={Lee},
+           familyi={L\bibinitperiod},
+           given={John\bibnamedelima M.},
+           giveni={J\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Springer, New York}%
+      }
+      \strng{namehash}{36896354ee3aedc1a13d683ea773634e}
+      \strng{fullhash}{36896354ee3aedc1a13d683ea773634e}
+      \strng{fullhashraw}{36896354ee3aedc1a13d683ea773634e}
+      \strng{bibnamehash}{36896354ee3aedc1a13d683ea773634e}
+      \strng{authorbibnamehash}{36896354ee3aedc1a13d683ea773634e}
+      \strng{authornamehash}{36896354ee3aedc1a13d683ea773634e}
+      \strng{authorfullhash}{36896354ee3aedc1a13d683ea773634e}
+      \strng{authorfullhashraw}{36896354ee3aedc1a13d683ea773634e}
+      \field{extraname}{1}
+      \field{sortinit}{L}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{Second}
+      \field{isbn}{978-1-4419-9981-8}
+      \field{series}{Graduate Texts in Mathematics}
+      \field{title}{Introduction to smooth manifolds}
+      \field{volume}{218}
+      \field{year}{2013}
+    \endentry
+    \entry{lee1997riemannian}{book}{}{}
+      \name{author}{1}{}{%
+        {{hash=36896354ee3aedc1a13d683ea773634e}{%
+           family={Lee},
+           familyi={L\bibinitperiod},
+           given={John\bibnamedelima M.},
+           giveni={J\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Springer-Verlag, New York}%
+      }
+      \strng{namehash}{36896354ee3aedc1a13d683ea773634e}
+      \strng{fullhash}{36896354ee3aedc1a13d683ea773634e}
+      \strng{fullhashraw}{36896354ee3aedc1a13d683ea773634e}
+      \strng{bibnamehash}{36896354ee3aedc1a13d683ea773634e}
+      \strng{authorbibnamehash}{36896354ee3aedc1a13d683ea773634e}
+      \strng{authornamehash}{36896354ee3aedc1a13d683ea773634e}
+      \strng{authorfullhash}{36896354ee3aedc1a13d683ea773634e}
+      \strng{authorfullhashraw}{36896354ee3aedc1a13d683ea773634e}
+      \field{extraname}{2}
+      \field{sortinit}{L}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{0-387-98271-X}
+      \field{note}{An introduction to curvature}
+      \field{series}{Graduate Texts in Mathematics}
+      \field{title}{Riemannian manifolds}
+      \field{volume}{176}
+      \field{year}{1997}
+      \verb{doi}
+      \verb 10.1007/b98852
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1007/b98852
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1007/b98852
+      \endverb
+    \endentry
+    \entry{liokumovich2018weyllawvolumespectrum}{article}{}{}
+      \name{author}{3}{}{%
+        {{hash=5afdbce6b879572dea3bb69c0692cf53}{%
+           family={Liokumovich},
+           familyi={L\bibinitperiod},
+           given={Yevgeny},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=a8c0bb3ddc1671524f2edbfe8373172b}{%
+           family={Marques},
+           familyi={M\bibinitperiod},
+           given={Fernando\bibnamedelima C.},
+           giveni={F\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+        {{hash=e8d1ffebd0f870fb08da00f8120be319}{%
+           family={Neves},
+           familyi={N\bibinitperiod},
+           given={André},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{d66e7d84d2028f19d169e18415982a5f}
+      \strng{fullhash}{d66e7d84d2028f19d169e18415982a5f}
+      \strng{fullhashraw}{d66e7d84d2028f19d169e18415982a5f}
+      \strng{bibnamehash}{d66e7d84d2028f19d169e18415982a5f}
+      \strng{authorbibnamehash}{d66e7d84d2028f19d169e18415982a5f}
+      \strng{authornamehash}{d66e7d84d2028f19d169e18415982a5f}
+      \strng{authorfullhash}{d66e7d84d2028f19d169e18415982a5f}
+      \strng{authorfullhashraw}{d66e7d84d2028f19d169e18415982a5f}
+      \field{sortinit}{L}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0003-486X,1939-8980}
+      \field{journaltitle}{Ann. of Math. (2)}
+      \field{number}{3}
+      \field{title}{Weyl law for the volume spectrum}
+      \field{volume}{187}
+      \field{year}{2018}
+      \field{pages}{933\bibrangedash 961}
+      \range{pages}{29}
+      \verb{doi}
+      \verb 10.4007/annals.2018.187.3.7
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.4007/annals.2018.187.3.7
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.4007/annals.2018.187.3.7
+      \endverb
+    \endentry
+    \entry{lusternik1951variational}{article}{}{}
+      \name{author}{2}{}{%
+        {{hash=f69427982cb6605e363e6bc249243e90}{%
+           family={Lyusternik},
+           familyi={L\bibinitperiod},
+           given={Lazar\bibnamedelima A.},
+           giveni={L\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=818534cb055a9389f25bc29ab839fb51}{%
+           family={Fet},
+           familyi={F\bibinitperiod},
+           given={Abram\bibnamedelima I.},
+           giveni={A\bibinitperiod\bibinitdelim I\bibinitperiod}}}%
+      }
+      \strng{namehash}{0a8971668becefcdeea78b89492687bf}
+      \strng{fullhash}{0a8971668becefcdeea78b89492687bf}
+      \strng{fullhashraw}{0a8971668becefcdeea78b89492687bf}
+      \strng{bibnamehash}{0a8971668becefcdeea78b89492687bf}
+      \strng{authorbibnamehash}{0a8971668becefcdeea78b89492687bf}
+      \strng{authornamehash}{0a8971668becefcdeea78b89492687bf}
+      \strng{authorfullhash}{0a8971668becefcdeea78b89492687bf}
+      \strng{authorfullhashraw}{0a8971668becefcdeea78b89492687bf}
+      \field{sortinit}{L}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Doklady Akad. Nauk SSSR (N.S.)}
+      \field{title}{Variational problems on closed manifolds}
+      \field{volume}{81}
+      \field{year}{1951}
+      \field{pages}{17\bibrangedash 18}
+      \range{pages}{2}
+    \endentry
+    \entry{marques2013existence}{article}{}{}
+      \name{author}{2}{}{%
+        {{hash=a8c0bb3ddc1671524f2edbfe8373172b}{%
+           family={Marques},
+           familyi={M\bibinitperiod},
+           given={Fernando\bibnamedelima C.},
+           giveni={F\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+        {{hash=e8d1ffebd0f870fb08da00f8120be319}{%
+           family={Neves},
+           familyi={N\bibinitperiod},
+           given={André},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{56ea2f5b82935319c3a3031f56280082}
+      \strng{fullhash}{56ea2f5b82935319c3a3031f56280082}
+      \strng{fullhashraw}{56ea2f5b82935319c3a3031f56280082}
+      \strng{bibnamehash}{56ea2f5b82935319c3a3031f56280082}
+      \strng{authorbibnamehash}{56ea2f5b82935319c3a3031f56280082}
+      \strng{authornamehash}{56ea2f5b82935319c3a3031f56280082}
+      \strng{authorfullhash}{56ea2f5b82935319c3a3031f56280082}
+      \strng{authorfullhashraw}{56ea2f5b82935319c3a3031f56280082}
+      \field{extraname}{1}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0020-9910,1432-1297}
+      \field{journaltitle}{Invent. Math.}
+      \field{number}{2}
+      \field{title}{Existence of infinitely many minimal hypersurfaces in positive {R}icci curvature}
+      \field{volume}{209}
+      \field{year}{2017}
+      \field{pages}{577\bibrangedash 616}
+      \range{pages}{40}
+      \verb{doi}
+      \verb 10.1007/s00222-017-0716-6
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1007/s00222-017-0716-6
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1007/s00222-017-0716-6
+      \endverb
+    \endentry
+    \entry{marques2016morseindexmultiplicityminmax}{article}{}{}
+      \name{author}{2}{}{%
+        {{hash=a8c0bb3ddc1671524f2edbfe8373172b}{%
+           family={Marques},
+           familyi={M\bibinitperiod},
+           given={Fernando\bibnamedelima C.},
+           giveni={F\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+        {{hash=e8d1ffebd0f870fb08da00f8120be319}{%
+           family={Neves},
+           familyi={N\bibinitperiod},
+           given={André},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{56ea2f5b82935319c3a3031f56280082}
+      \strng{fullhash}{56ea2f5b82935319c3a3031f56280082}
+      \strng{fullhashraw}{56ea2f5b82935319c3a3031f56280082}
+      \strng{bibnamehash}{56ea2f5b82935319c3a3031f56280082}
+      \strng{authorbibnamehash}{56ea2f5b82935319c3a3031f56280082}
+      \strng{authornamehash}{56ea2f5b82935319c3a3031f56280082}
+      \strng{authorfullhash}{56ea2f5b82935319c3a3031f56280082}
+      \strng{authorfullhashraw}{56ea2f5b82935319c3a3031f56280082}
+      \field{extraname}{2}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{2168-0930,2168-0949}
+      \field{journaltitle}{Camb. J. Math.}
+      \field{number}{4}
+      \field{title}{Morse index and multiplicity of min-max minimal hypersurfaces}
+      \field{volume}{4}
+      \field{year}{2016}
+      \field{pages}{463\bibrangedash 511}
+      \range{pages}{49}
+      \verb{doi}
+      \verb 10.4310/CJM.2016.v4.n4.a2
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.4310/CJM.2016.v4.n4.a2
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.4310/CJM.2016.v4.n4.a2
+      \endverb
+    \endentry
+    \entry{marques2019morseindexmultiplicityminmax}{article}{}{}
+      \name{author}{2}{}{%
+        {{hash=a8c0bb3ddc1671524f2edbfe8373172b}{%
+           family={Marques},
+           familyi={M\bibinitperiod},
+           given={Fernando\bibnamedelima C.},
+           giveni={F\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+        {{hash=e8d1ffebd0f870fb08da00f8120be319}{%
+           family={Neves},
+           familyi={N\bibinitperiod},
+           given={André},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{56ea2f5b82935319c3a3031f56280082}
+      \strng{fullhash}{56ea2f5b82935319c3a3031f56280082}
+      \strng{fullhashraw}{56ea2f5b82935319c3a3031f56280082}
+      \strng{bibnamehash}{56ea2f5b82935319c3a3031f56280082}
+      \strng{authorbibnamehash}{56ea2f5b82935319c3a3031f56280082}
+      \strng{authornamehash}{56ea2f5b82935319c3a3031f56280082}
+      \strng{authorfullhash}{56ea2f5b82935319c3a3031f56280082}
+      \strng{authorfullhashraw}{56ea2f5b82935319c3a3031f56280082}
+      \field{extraname}{3}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0001-8708,1090-2082}
+      \field{journaltitle}{Adv. Math.}
+      \field{title}{Morse index of multiplicity one min-max minimal hypersurfaces}
+      \field{volume}{378}
+      \field{year}{2021}
+      \field{pages}{Paper No. 107527\bibrangessep 58}
+      \range{pages}{-1}
+      \verb{doi}
+      \verb 10.1016/j.aim.2020.107527
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1016/j.aim.2020.107527
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1016/j.aim.2020.107527
+      \endverb
+    \endentry
+    \entry{marques2018equidistributionminimalhypersurfacesgeneric}{article}{}{}
+      \name{author}{3}{}{%
+        {{hash=a8c0bb3ddc1671524f2edbfe8373172b}{%
+           family={Marques},
+           familyi={M\bibinitperiod},
+           given={Fernando\bibnamedelima C.},
+           giveni={F\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+        {{hash=e8d1ffebd0f870fb08da00f8120be319}{%
+           family={Neves},
+           familyi={N\bibinitperiod},
+           given={André{}},
+           giveni={A\bibinitperiod}}}%
+        {{hash=faf5c6e36329c7b6ef35fe7da7cb11c4}{%
+           family={Song},
+           familyi={S\bibinitperiod},
+           given={Antoine},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{96233b6c09d3c840b8fa086ef0829ac2}
+      \strng{fullhash}{96233b6c09d3c840b8fa086ef0829ac2}
+      \strng{fullhashraw}{96233b6c09d3c840b8fa086ef0829ac2}
+      \strng{bibnamehash}{96233b6c09d3c840b8fa086ef0829ac2}
+      \strng{authorbibnamehash}{96233b6c09d3c840b8fa086ef0829ac2}
+      \strng{authornamehash}{96233b6c09d3c840b8fa086ef0829ac2}
+      \strng{authorfullhash}{96233b6c09d3c840b8fa086ef0829ac2}
+      \strng{authorfullhashraw}{96233b6c09d3c840b8fa086ef0829ac2}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0020-9910,1432-1297}
+      \field{journaltitle}{Invent. Math.}
+      \field{number}{2}
+      \field{title}{Equidistribution of minimal hypersurfaces for generic metrics}
+      \field{volume}{216}
+      \field{year}{2019}
+      \field{pages}{421\bibrangedash 443}
+      \range{pages}{23}
+      \verb{doi}
+      \verb 10.1007/s00222-018-00850-5
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1007/s00222-018-00850-5
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1007/s00222-018-00850-5
+      \endverb
+    \endentry
+    \entry{milnor1963morse}{book}{}{}
+      \name{author}{1}{}{%
+        {{hash=674d9591b8067fc9c5c7fbb2062e88d5}{%
+           family={Milnor},
+           familyi={M\bibinitperiod},
+           given={John\bibnamedelima W.},
+           giveni={J\bibinitperiod\bibinitdelim W\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Princeton University Press, Princeton, NJ}%
+      }
+      \strng{namehash}{674d9591b8067fc9c5c7fbb2062e88d5}
+      \strng{fullhash}{674d9591b8067fc9c5c7fbb2062e88d5}
+      \strng{fullhashraw}{674d9591b8067fc9c5c7fbb2062e88d5}
+      \strng{bibnamehash}{674d9591b8067fc9c5c7fbb2062e88d5}
+      \strng{authorbibnamehash}{674d9591b8067fc9c5c7fbb2062e88d5}
+      \strng{authornamehash}{674d9591b8067fc9c5c7fbb2062e88d5}
+      \strng{authorfullhash}{674d9591b8067fc9c5c7fbb2062e88d5}
+      \strng{authorfullhashraw}{674d9591b8067fc9c5c7fbb2062e88d5}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Based on lecture notes by M. Spivak and R. Wells}
+      \field{series}{Annals of Mathematics Studies}
+      \field{title}{Morse theory}
+      \field{volume}{No. 51}
+      \field{year}{1963}
+    \endentry
+    \entry{nash1956imbedding}{article}{}{}
+      \name{author}{1}{}{%
+        {{hash=6de4913ee803384986db742befd3f429}{%
+           family={Nash},
+           familyi={N\bibinitperiod},
+           given={John\bibnamedelima F.},
+           giveni={J\bibinitperiod\bibinitdelim F\bibinitperiod}}}%
+      }
+      \strng{namehash}{6de4913ee803384986db742befd3f429}
+      \strng{fullhash}{6de4913ee803384986db742befd3f429}
+      \strng{fullhashraw}{6de4913ee803384986db742befd3f429}
+      \strng{bibnamehash}{6de4913ee803384986db742befd3f429}
+      \strng{authorbibnamehash}{6de4913ee803384986db742befd3f429}
+      \strng{authornamehash}{6de4913ee803384986db742befd3f429}
+      \strng{authorfullhash}{6de4913ee803384986db742befd3f429}
+      \strng{authorfullhashraw}{6de4913ee803384986db742befd3f429}
+      \field{sortinit}{N}
+      \field{sortinithash}{22369a73d5f88983a108b63f07f37084}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0003-486X}
+      \field{journaltitle}{Ann. of Math. (2)}
+      \field{title}{The imbedding problem for {R}iemannian manifolds}
+      \field{volume}{63}
+      \field{year}{1956}
+      \field{pages}{20\bibrangedash 63}
+      \range{pages}{44}
+      \verb{doi}
+      \verb 10.2307/1969989
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.2307/1969989
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.2307/1969989
+      \endverb
+    \endentry
+    \entry{pitts1981existence}{book}{}{}
+      \name{author}{1}{}{%
+        {{hash=a85a347130aa5c9591a8d29a7cc28363}{%
+           family={Pitts},
+           familyi={P\bibinitperiod},
+           given={Jon\bibnamedelima T.},
+           giveni={J\bibinitperiod\bibinitdelim T\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Princeton University Press, Princeton, NJ; University of Tokyo Press, Tokyo}%
+      }
+      \strng{namehash}{a85a347130aa5c9591a8d29a7cc28363}
+      \strng{fullhash}{a85a347130aa5c9591a8d29a7cc28363}
+      \strng{fullhashraw}{a85a347130aa5c9591a8d29a7cc28363}
+      \strng{bibnamehash}{a85a347130aa5c9591a8d29a7cc28363}
+      \strng{authorbibnamehash}{a85a347130aa5c9591a8d29a7cc28363}
+      \strng{authornamehash}{a85a347130aa5c9591a8d29a7cc28363}
+      \strng{authorfullhash}{a85a347130aa5c9591a8d29a7cc28363}
+      \strng{authorfullhashraw}{a85a347130aa5c9591a8d29a7cc28363}
+      \field{sortinit}{P}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{0-691-08290-1}
+      \field{series}{Mathematical Notes}
+      \field{title}{Existence and regularity of minimal surfaces on {R}iemannian manifolds}
+      \field{volume}{27}
+      \field{year}{1981}
+    \endentry
+    \entry{schoen1981regularity}{article}{}{}
+      \name{author}{2}{}{%
+        {{hash=64d5c8c524ee9c5523cb938fceecead2}{%
+           family={Schoen},
+           familyi={S\bibinitperiod},
+           given={Richard},
+           giveni={R\bibinitperiod}}}%
+        {{hash=9f8536c66be5b63ee2d7f17a5e76b254}{%
+           family={Simon},
+           familyi={S\bibinitperiod},
+           given={Leon},
+           giveni={L\bibinitperiod}}}%
+      }
+      \strng{namehash}{fc0bd46dab23b60944531ad42de61cf5}
+      \strng{fullhash}{fc0bd46dab23b60944531ad42de61cf5}
+      \strng{fullhashraw}{fc0bd46dab23b60944531ad42de61cf5}
+      \strng{bibnamehash}{fc0bd46dab23b60944531ad42de61cf5}
+      \strng{authorbibnamehash}{fc0bd46dab23b60944531ad42de61cf5}
+      \strng{authornamehash}{fc0bd46dab23b60944531ad42de61cf5}
+      \strng{authorfullhash}{fc0bd46dab23b60944531ad42de61cf5}
+      \strng{authorfullhashraw}{fc0bd46dab23b60944531ad42de61cf5}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0010-3640,1097-0312}
+      \field{journaltitle}{Comm. Pure Appl. Math.}
+      \field{number}{6}
+      \field{title}{Regularity of stable minimal hypersurfaces}
+      \field{volume}{34}
+      \field{year}{1981}
+      \field{pages}{741\bibrangedash 797}
+      \range{pages}{57}
+      \verb{doi}
+      \verb 10.1002/cpa.3160340603
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1002/cpa.3160340603
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1002/cpa.3160340603
+      \endverb
+    \endentry
+    \entry{song2023existence}{article}{}{}
+      \name{author}{1}{}{%
+        {{hash=faf5c6e36329c7b6ef35fe7da7cb11c4}{%
+           family={Song},
+           familyi={S\bibinitperiod},
+           given={Antoine},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{faf5c6e36329c7b6ef35fe7da7cb11c4}
+      \strng{fullhash}{faf5c6e36329c7b6ef35fe7da7cb11c4}
+      \strng{fullhashraw}{faf5c6e36329c7b6ef35fe7da7cb11c4}
+      \strng{bibnamehash}{faf5c6e36329c7b6ef35fe7da7cb11c4}
+      \strng{authorbibnamehash}{faf5c6e36329c7b6ef35fe7da7cb11c4}
+      \strng{authornamehash}{faf5c6e36329c7b6ef35fe7da7cb11c4}
+      \strng{authorfullhash}{faf5c6e36329c7b6ef35fe7da7cb11c4}
+      \strng{authorfullhashraw}{faf5c6e36329c7b6ef35fe7da7cb11c4}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0003-486X,1939-8980}
+      \field{journaltitle}{Ann. of Math. (2)}
+      \field{number}{3}
+      \field{title}{Existence of infinitely many minimal hypersurfaces in closed manifolds}
+      \field{volume}{197}
+      \field{year}{2023}
+      \field{pages}{859\bibrangedash 895}
+      \range{pages}{37}
+      \verb{doi}
+      \verb 10.4007/annals.2023.197.3.1
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.4007/annals.2023.197.3.1
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.4007/annals.2023.197.3.1
+      \endverb
+    \endentry
+    \entry{struwe2008variational}{book}{}{}
+      \name{author}{1}{}{%
+        {{hash=c8502c0ee43e96753d5bd087800519c6}{%
+           family={Struwe},
+           familyi={S\bibinitperiod},
+           given={Michael},
+           giveni={M\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Springer-Verlag, Berlin}%
+      }
+      \strng{namehash}{c8502c0ee43e96753d5bd087800519c6}
+      \strng{fullhash}{c8502c0ee43e96753d5bd087800519c6}
+      \strng{fullhashraw}{c8502c0ee43e96753d5bd087800519c6}
+      \strng{bibnamehash}{c8502c0ee43e96753d5bd087800519c6}
+      \strng{authorbibnamehash}{c8502c0ee43e96753d5bd087800519c6}
+      \strng{authornamehash}{c8502c0ee43e96753d5bd087800519c6}
+      \strng{authorfullhash}{c8502c0ee43e96753d5bd087800519c6}
+      \strng{authorfullhashraw}{c8502c0ee43e96753d5bd087800519c6}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{Fourth}
+      \field{note}{Applications to nonlinear partial differential equations and Hamiltonian systems}
+      \field{title}{Variational methods}
+      \field{volume}{34}
+      \field{year}{2008}
+    \endentry
+    \entry{walter1998ordinary}{book}{}{}
+      \name{author}{1}{}{%
+        {{hash=b7aba555cc1e04b8039e398ce6e84b15}{%
+           family={Walter},
+           familyi={W\bibinitperiod},
+           given={Wolfgang},
+           giveni={W\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Springer-Verlag, New York}%
+      }
+      \strng{namehash}{b7aba555cc1e04b8039e398ce6e84b15}
+      \strng{fullhash}{b7aba555cc1e04b8039e398ce6e84b15}
+      \strng{fullhashraw}{b7aba555cc1e04b8039e398ce6e84b15}
+      \strng{bibnamehash}{b7aba555cc1e04b8039e398ce6e84b15}
+      \strng{authorbibnamehash}{b7aba555cc1e04b8039e398ce6e84b15}
+      \strng{authornamehash}{b7aba555cc1e04b8039e398ce6e84b15}
+      \strng{authorfullhash}{b7aba555cc1e04b8039e398ce6e84b15}
+      \strng{authorfullhashraw}{b7aba555cc1e04b8039e398ce6e84b15}
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{0-387-98459-3}
+      \field{note}{Translated from the sixth German (1996) edition by Russell Thompson, Readings in Mathematics}
+      \field{series}{Graduate Texts in Mathematics}
+      \field{title}{Ordinary differential equations}
+      \field{volume}{182}
+      \field{year}{1998}
+      \verb{doi}
+      \verb 10.1007/978-1-4612-0601-9
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1007/978-1-4612-0601-9
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1007/978-1-4612-0601-9
+      \endverb
+    \endentry
+    \entry{yau1981seminar}{incollection}{}{}
+      \name{author}{1}{}{%
+        {{hash=e0fa0ebde45171f17c5e10a87de860ef}{%
+           family={Yau},
+           familyi={Y\bibinitperiod},
+           given={Shing\bibnamedelima Tung},
+           giveni={S\bibinitperiod\bibinitdelim T\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Princeton Univ. Press, Princeton, NJ}%
+      }
+      \strng{namehash}{e0fa0ebde45171f17c5e10a87de860ef}
+      \strng{fullhash}{e0fa0ebde45171f17c5e10a87de860ef}
+      \strng{fullhashraw}{e0fa0ebde45171f17c5e10a87de860ef}
+      \strng{bibnamehash}{e0fa0ebde45171f17c5e10a87de860ef}
+      \strng{authorbibnamehash}{e0fa0ebde45171f17c5e10a87de860ef}
+      \strng{authornamehash}{e0fa0ebde45171f17c5e10a87de860ef}
+      \strng{authorfullhash}{e0fa0ebde45171f17c5e10a87de860ef}
+      \strng{authorfullhashraw}{e0fa0ebde45171f17c5e10a87de860ef}
+      \field{sortinit}{Y}
+      \field{sortinithash}{fd67ad5a9ef0f7456bdd9aab10fe1495}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Seminar on {D}ifferential {G}eometry}
+      \field{isbn}{0-691-08268-5}
+      \field{series}{Ann. of Math. Stud.}
+      \field{title}{Survey on partial differential equations in differential geometry}
+      \field{volume}{No. 102}
+      \field{year}{1982}
+      \field{pages}{3\bibrangedash 71}
+      \range{pages}{69}
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

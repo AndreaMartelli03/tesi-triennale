@@ -1,0 +1,89 @@
+\documentclass{article}
+\usepackage[centering]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc} % Ensure proper encoding
+\usepackage{lmodern} % Use Latin Modern fonts which provide more sizes
+\usepackage{babel}
+
+%----- Math ---------------------------------------------
+\usepackage{amsmath}         
+\usepackage{mathtools}       
+\usepackage{amssymb}   
+\usepackage{amsthm}         
+
+%----- Design ------------------------------------------- 
+\usepackage{lastpage}                              
+\usepackage{enumitem}
+%----- Pacchetti Disegno --------------------------------
+\usepackage{tikz}
+\usepackage{tikz-cd}
+\usepackage{graphicx}
+\usepackage{thmtools}
+\usepackage{xcolor}
+\usepackage[all]{xy}        
+\usetikzlibrary{decorations.markings}
+\usetikzlibrary{hobby}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+
+%----- Symbols -----------------------------------------
+\providecommand{\R}{\mathbb{R}}
+\providecommand{\N}{\mathbb{N}}
+\providecommand{\Z}{\mathbb{Z}}
+\providecommand{\Sp}{\mathbb{S}}
+\providecommand{\D}{\mathbb{D}}
+\providecommand{\E}{\mathbb{E}}
+\providecommand{\F}{\mathbb{F}}
+\providecommand{\T}{\mathcal{T}}
+\providecommand{\de}{\partial}
+\providecommand{\ve}{\varepsilon}
+\providecommand{\vphi}{\varphi}
+\providecommand{\dif}{\mathrm{d}}
+\providecommand{\integral}[3]{\int_{#1} #2 \mathrm{d}#3}
+\providecommand{\id}{\mathrm{id}}
+\providecommand{\sff}{\mathrm{I\!I}}
+\newcommand{\mapsfrom}{\mathrel{\reflectbox{\ensuremath{\mapsto}}}}
+
+%----- MathOperators -----------------------------------
+\DeclareMathOperator{\grad}{grad}
+
+\title{DISEGNI}
+\author{Andrea Martelli}
+\begin{document}
+	Modelli1
+	\input{Modelli1.tex}
+	
+	\newpage
+	
+	Modelli2
+	\input{Modelli2.tex}
+	
+	\newpage
+	
+	SempConn
+	\input{SempConn.tex}
+	
+	\newpage
+	
+	MinimizzoToro
+	
+	\newpage
+	
+	NonMinimo
+	\input{NonMinimo.tex}
+	
+	\newpage
+	
+	Grafico Coseno quadro
+	
+	\newpage
+	
+	A¢utointersezione
+	
+	\newpage
+	
+	ellissoide
+	
+	
+	
+\end{document}

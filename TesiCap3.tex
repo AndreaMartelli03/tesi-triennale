@@ -1,0 +1,320 @@
+
+In questo capitolo affronteremo uno strumento variazionale per individuare punti critici di funzionali: il teorema di passo montano, di A. Ambrosetti e P. Rabinowitz \cite{ambrosetti1973dual}. Enunceremo una versione leggermente più generale di quella enunciata in \cite[Section.81]{ambrosetti2007nonlinear}: racchiude più situazioni geometriche e avrà una forma più adatta per essere applicata alla dimostrazione del teorema di Lusternik-Fet. Anche se con delle ipotesi leggermente diverse, la dimostrazione è sostanzialmente la stessa ed è basata soprattutto su \cite[Chapter~7]{ambrosetti2007nonlinear}.
+
+\section{Passo montano su spazi di Hilbert}
+
+	
+	In questa sezione consideriamo uno spazio di Hilbert \((\E, \langle \cdot, \cdot \rangle)\) e una funzione \(f: \E \to \R\) di cui vogliamo individuare dei valori critici (assunti da punti critici). 
+	Assumiamo che \(f\) sia di classe \(C^{1,1}_{loc}\), ovvero di classe \(C^1\) (nel senso di Fréchet, cf. \cite[Definition~1.1]{ambrosetti2007nonlinear}) e che il gradiente \(\grad f\) sia un campo continuo localmente Lipschitziano, cioè che per ogni \(u_0 \in \E\) esista un intorno \(U=U(u_0) \subset \E\) di \(u_0\) e una costante \(L=L(u_0)>0\) tale che
+	\[
+	\forall u,v \in U, \quad |f(u)-f(v)| \leq L \|u-v\|,
+	\]
+	dove \(\|\cdot\|\) è la norma indotta dal prodotto scalare \(\langle \cdot,\cdot\rangle\). 
+	
+	Per enunciare il teorema, abbiamo bisogno di studiare una particolare condizione di compattezza, la condizione di Palais-Smale.
+	
+	\subsection{Condizione di Palais-Smale}
+	
+	\begin{defi}
+		Una successione \((u_h)_h \subset \E\) si dice una (PS)-successione della funzione \(f\) se la successione \((f(u_h))_h \subset \R\) è limitata e 
+		\[
+		\grad f (u_h) \to 0.
+		\]
+		
+		La funzione \(f\) si dice di Palais-Smale (o che soddisfa la \textit{condizione di Palais-Smale} (PS)) se ogni sua (PS)-successione ammette una sottosuccessione convergente. 
+	\end{defi}
+	
+	La condizione di Palais-Smale permette di controllare il comportamento del gradiente di \(f\) intorno ai livelli di valori regolari.
+	
+	\begin{lemma} \label{lemma: PS -> controllo sul gradiente}
+		Supponiamo che \(f\) soddisfi (PS) e che \(\lambda \in \R\) sia un valore regolare. Allora esiste \(\delta >0\) tale che per ogni \(u \in \E\)
+		\[
+		|f(u)-\lambda| \leq \delta \implies \|\grad f(u)\| \geq \delta.
+		\]
+	\end{lemma}
+	\begin{proof}
+		Supponiamo per assurdo che per ogni \(h \in \N\) esista \(u_h \in \E\) tale che \(\|\grad f(u_h) \| < 1/h\) e \(|f(u_h)-\lambda | \leq 1/h\). Allora \(u_h\) è una (PS)-successione, e quindi a meno di estrarre una sottosuccessione converge a qualche \(u \in \E\). Per continuità, \(\grad f(u) =0\) e \(f(u)=\lambda\), contraddicendo la regolarità di \(\lambda\). 
+	\end{proof}
+	
+	\subsection{Teorema di passo montano} \label{subs: MP Hilbert}
+	
+	Consideriamo il flusso \(\phi: \R \times \E \to \E\) associato all'equazione differenziale
+	\begin{equation}\label{eq: flusso di f}
+		\dot u = \frac{-\grad f(u)}{1+ \|\grad f (u)\|}.
+	\end{equation}
+	Il flusso è definito globalmente perché il campo vettoriale
+	\[
+	W(u) \coloneq \frac{-\grad f(u)}{1+ \|\grad f (u)\|}
+	\]
+	è localmente Lipschitziano e limitato. Infatti, essendo localmente Lipschitziano è garantita l'esistenza e unicità locale della soluzione di (\ref{eq: flusso di f}) dipendente in maniera continua dal dato inziale (il Teorema~\ref{teo: esistenza e unicità locale sol pbm Cauchy} si generalizza a spazi di Banach sostanzialmente con la stessa dimostrazione \cite{ambrosetti1967esistenza}). Supponiamo per assurdo che per il dato iniziale \(u_0 \in \E\) l'intervallo aperto di definizione massimale della soluzione \((a,b)\) sia limitato. Senza perdita di generalità supponiamo che \(b<+\infty\). Per ogni successione \((t_j)_j \subset (a,b)\) tale che \(t_j \to b\), osserviamo che la successione \(\phi(t_j,u_0)\) è di Cauchy:
+	\[
+	\|\phi(t_j,u_0) - \phi(t_i,u_0) \| \leq  \int_{t_i}^{t_j} \|W(\phi(t,u_0))\| \ \dif t \leq |t_i-t_j|
+	\]
+	perché \(\|W\| \leq 1\). Dato che \(\E\) è completo,  \(\phi(t_j,u_0) \to v_0\) per qualche \(v_0 \in \E\). Allora possiamo estendere la soluzione considerando la soluzione locale del problema 
+	\[
+	\begin{cases}
+		\dot v = W(v) \\
+		v(b) = v_0
+	\end{cases}
+	\]
+	contro la massimalità dell'intervallo \((a,b)\). Quindi ogni soluzione è definita su \(\R\) e il flusso è definito su \(\R \times \E\).
+	
+	Un'altra osservazione importante è che, siccome \(W\) è parallelo a \(-\grad f\), le orbite di \(\phi\) 
+	\[
+	\sigma(u_0) \coloneq \{\phi(t,u_0) : t \in \R\}
+	\]
+	coincidono con le orbite associate al campo \(-\grad f\), cioè coincide con il supporto della soluzione massimale del problema di Cauchy
+	\[
+	\begin{cases}
+		\dot u = -\grad f(u) \\
+		u(0) = u_0.
+	\end{cases}
+	\]
+	Questo vuol dire che \(f\) decresce lungo \(\phi\): sarà l'idea chiave della dimostrazione del teorema di passo montano. 
+	
+	Per ogni \(t \in \R\), denotiamo \(\phi_t : \E\to \E\) la mappa \(u \mapsto \phi(t,u)\).
+	
+	\begin{defi}
+		Una famiglia non vuota \(\mathcal{H}\) di sottoinsiemi di \(\E\) è detta \textit{\(\phi\)-invariante} se 
+		\[
+		\phi_t(H) \in \mathcal{H} \quad \forall H \in \mathcal{H}, \ t \geq 0.
+		\]
+	\end{defi}
+	
+	Possiamo enunciare:
+	\begin{teo}[passo montano, Ambrosetti-Rabinowitz, 1973]\label{teo: MP}
+		Sia \(\E\) uno spazio di Hilbert e \(f \in C^{1,1}_{loc}(\E)\) una funzione di Palais-Smale. Sia \(\mathcal{H}\) una famiglia \(\phi\)-invariante tale che
+		\[
+		\lambda \coloneq \inf_{H \in \mathcal{H}} \sup_{u \in H} f(u) \in \R.
+		\]
+		Allora \(\lambda\) è un valore critico per \(f\). 
+	\end{teo}
+	
+	\begin{lemma}\label{lemma: di deformazione}
+		Sia \(f\) di Palais-Smale e supponiamo che \(\lambda\) sia un valore regolare per \(f\). Allora esistono \(\delta>0\) e \(T>0\) tale che per ogni \(u \in \E\)
+		\[
+		f(u)\leq \lambda +\delta \implies f(\phi_T(u)) \leq \lambda -\delta.
+		\]
+	\end{lemma}
+	\begin{proof}
+		Sia \(\delta>0\) dato dal Lemma~\ref{lemma: PS -> controllo sul gradiente}, cioè tale che per ogni \(u \in \E\)
+		\[
+		|f(u)-\lambda| \leq \delta \implies \|\grad f(u)\| \geq \delta.
+		\]
+		Per ogni \(u \in \E\), denotiamo con \(\phi_u: \R \to \E\) la mappa \( t \mapsto \phi(t,u) \).
+		Poiché
+		\[
+		\frac{\dif f \circ \phi_u}{\dif t}(t) = \dif f (\phi(t,u))[\dot \phi_u(t)] = - \frac{\|\grad f(\phi(t,u))\|^2}{1+\|\grad f(\phi(t,u))\|},
+		\]
+		valgono:
+		\begin{enumerate}[label=(\roman*)]
+			\item la funzione \(f \circ \phi_u\) è decrescente;
+			\item per ogni \(a,b \in [0,+\infty)\),
+			\[
+			f(\phi(b,u))-f(\phi(a,u)) = -\int_a^b \frac{\|\grad f(\phi(t,u))\|^2}{1+\|\grad f(\phi(t,u))\|} \ \dif t.
+			\]
+		\end{enumerate}
+		
+		Sia \(c=\delta^2/(1+\delta)\). Osserviamo che per ogni \(u \in \E\)
+		\[
+		|f(u)-\lambda| \leq \delta \implies \frac{\|\grad f(u)\|^2}{1+\|\grad f(u)\|} \geq c,
+		\]
+		perché la funzione \(s \mapsto s^2/(1+s)\) è non decrescente su \([0,+\infty)\).
+		
+		%	\input{Disegni/grafichinoMP.tex}
+		
+		Sia \(T= 2\delta/c\) e supponiamo per assurdo che esista \(u \in \E\) tale che \(f(u)\leq \lambda +\delta\) e \(f(\phi_T(u)) > \lambda -\delta\). Da (i) segue che
+		\[
+		\lambda-\delta < f(\phi(t,u)) \leq \lambda+\delta \quad \forall t \in [0,T].
+		\]
+		Usando (ii) con \(a=0\) e \(b=T\),
+		\begin{align*}
+			f(\phi_T(u)) &= f(u) - \int_0^T \frac{\|\grad f(\phi(t,u))\|^2}{1+\|\grad f(\phi(t,u))\|} \ \dif t \\
+			& \leq \lambda +\delta - T c \\
+			&= \lambda -\delta 
+		\end{align*}
+		in contraddizione con quanto trovato prima. Dunque per ogni \(u \in \E\)
+		\[
+		f(u)\leq \lambda +\delta \implies f(\phi_T(u)) \leq \lambda -\delta.
+		\]
+		
+	\end{proof}
+	
+	\begin{proof}[Dimostrazione del Teorema~\ref{teo: MP}]
+		Supponiamo per assurdo che \( \lambda \) sia un valore regolare. Per il Lemma~\ref{lemma: di deformazione} esistono \(\delta>0\) e \(T>0\) tale che per ogni \(u \in \E\)
+		\[
+		f(u)\leq \lambda +\delta \implies f(\phi_T(u)) \leq \lambda -\delta.
+		\]
+		Sia \(H \in \mathcal{H}\) tale che \(\sup_H f \leq \lambda + \delta\). Allora 
+		\[
+		\sup_{u \in \phi_T(H)} f(u) = \sup_{v \in H} f(\phi_T(v)) \leq \lambda -\delta 
+		\]
+		e siccome \(\phi_T(H) \in \mathcal{H}\), questa è una contraddizione. 
+	\end{proof}
+
+
+\section{Passo montano su \texorpdfstring{$H^1(\Sp^1,M)$}{H1(S1,M)}}\label{sez: MP con energia}
+
+Nella dimostrazione del Lemma~\ref{lemma: di deformazione} e del Teorema~\ref{teo: MP}, non abbiamo mai usato veramente la struttura di spazio vettoriale, ma solo:
+\begin{itemize}
+	\item risultati di esistenza, unicità e prolungamento del problema di Cauchy associato a una ODE;
+	\item regolarità e gradiente della funzione \(f\) di cui cerchiamo i punti critici.
+\end{itemize}
+Dunque la dimostrazione vale anche per il caso di varietà di Hilbert \(E \subset \mathbb{H}\) e funzionali \(f \in C^\infty(E)\) con gradiente \(\grad f: E \to \mathbb{H}\) localmente Lipschitziano. Vediamo nel dettaglio il caso dello spazio \(H^1(\Sp^1,M)\) e del funzionale energia \(E\) associati a una varietà chiusa \(M \subset \R^N\). Dimostrare la condizione di Palais-Smale per una funzione è in generale un passaggio tecnico non immediato. Assumendo \(M \subset \R^N\), possiamo usare la seconda forma fondamentale (cf. Sezione~\ref{sez: sottovarietà}) per generalizzare la dimostrazione proposta in \cite[Theorem~4.4]{struwe2008variational} per il teorema di Birkhoff sull'esistenza di geodetiche chiuse su una sfera contenuta in \(\R^3\). 
+
+Ricordiamo che \(E\) è esteso naturalmente dal funzionale liscio
+\[
+	\widetilde{E}(u) = \frac{1}{2} \|\dot u \|_{L^2(I,\R^N)}^2,
+\]
+che ha gradiente Lispchitziano. Infatti, per ogni \(u,v \in H^1(\Sp^1,\R^N)\),
+\begin{align*}
+	\| \grad \widetilde{E}(u)-\grad \widetilde{E}(v)\|_{H^1} &= \| \dif \widetilde{E}(u)-\dif \widetilde{E}(v)\|_{(H^1)^*} \\
+	&\leq \|\dot u- \dot v\|_{L^2} \\
+	&\leq \|u-v\|_{H^1}.
+\end{align*}
+In particolare anche \(\grad E = \pi^\parallel(\grad \widetilde{E})\) è Lipschitziano.
+
+Posto
+\[
+	W = - \frac{\grad E}{1 + \|\grad E\|_{H^1}},
+\]
+possiamo ripetere tutti i ragionamenti dell'inizio della sottosezione~\ref{subs: MP Hilbert} per garantire l'esistenza del flusso 
+\[
+	\phi:\R \times H^1(\Sp^1,M) \to H^1(\Sp^1,M)
+\]
+associato all'equazione
+\[
+	\frac{\dif \alpha}{\dif t}(t) = W(\alpha(t)).
+\]
+Infatti, basta osservare che le orbite sono contenute in \(H^1(\Sp^1,M)\) perché \(W\) è sempre un vettore tangente a \(H^1(\Sp^1,M)\). Inoltre, siccome \(E\) è di classe \(C^\infty\), anche \(\phi\) è di classe \(C^\infty\).
+
+Denotiamo per ogni \(t \in \R\) con \(\phi_t:H^1(\Sp^1,M) \to H^1(\Sp^1,M)\) la mappa 
+\[
+\phi_t(u) \coloneq \phi(t,u).
+\]
+
+\begin{defi}
+	Una famiglia non vuota \(\mathcal{H}\) di sottoinsiemi di \(H^1(\Sp^1,M)\) è detta \textit{\(\phi\)-invariante} se 
+	\[
+		\phi_t(H) \in \mathcal{H} \quad \forall H \in \mathcal{H}, \ t \in \R.
+	\]
+\end{defi}
+
+Dobbiamo verificare che \(E\) soddisfi la condizione di Palais-Smale. 
+\begin{lemma}
+	Sia \((\gamma_h)_h \subset H^1(\Sp^1,M)\) una successione tale che \((E(\gamma_h))_h \subset \R\) sia limitata e 
+	\begin{equation*}
+		\|\grad E(\gamma_h)\|_{H^1} \to 0.
+	\end{equation*}
+	Allora esiste una sottosuccessione corvengente. 
+\end{lemma}
+\begin{proof}
+	Siccome \(M\) è compatta in \(\R^N\), è anche limitata, quindi esiste \(c_1>0\) tale che
+	\[
+		\|\gamma\|_{L^2(\Sp^1,\R^N)} \leq \|\gamma\|_{C^0(\Sp^1,\R^N)} \leq c_1
+	\] 
+	per ogni \(\gamma \in H^1(\Sp^1,M)\). Siccome \(2E(\gamma) = \|\dot \gamma\|_{H^0}\) e \((E(\gamma_h))_h\) è limitata, esiste \(c_2>0\) tale che per ogni \(h \in \N\)
+	\[
+		\|\gamma_h\|_{H^1(\Sp^1,\R^N)} \leq c_2.
+	\]
+	Per il Teorema~\ref{teo: immersione Sobolev per S^1}, esistono una sottosuccessione \((\gamma_{h_k})_k\) e un elemento \(\gamma \in H^1(\Sp^1,\R^N)\) tali che
+	\begin{itemize}
+		\item \(\dot \gamma_{h_k} \rightharpoonup \dot \gamma\) in \(H^1(I,\R^N)\),
+		\item \(\gamma_{h_k} \to \gamma\) in \(C^0(\Sp^1,\R^N)\).
+	\end{itemize}
+	In particolare \(\gamma_{h_k} \to \gamma\) in \(L^2(\Sp^1,\R^N)\). Inoltre, poiché \(M\) è chiuso in \(\R^N\) e il limite uniforme coincide con il limite puntuale, \(\gamma(t) \in M\) per ogni \(t \in \Sp^1\), e quindi \(\gamma \in H^1(\Sp^1,M)\).
+	
+	Resta da provare che \(\dot \gamma_{h_k} \to \dot \gamma\) in \(L^2\). Scriviamo \(v_k = \gamma_{h_k}-\gamma\).
+	Siano \(\pi^\parallel_\gamma\) e \(\pi^\perp_\gamma\) le proiezioni di \(H^1(\Sp^1,\R^N)\) su \(T_\gamma H^1(\Sp^1,M)\) e su \(N_\gamma H^1(\Sp^1,M)\) rispettivamente. 
+	
+	%\input{Disegni/proiezioni.tex}
+	
+	Consideriamo la successione
+	\[
+		w_k \coloneq \pi^\parallel_\gamma (v_k) \in T_\gamma H^1(\Sp^1,M).
+	\]
+	Essendo limitata, a meno di estrarre un'altra sottosuccessione, \(w_k\) converge a \(0\) rispetto alla topologia forte di \(C^0(\Sp^1,\R^N)\) e rispetto alla topologia debole di \(H^1(\Sp^1,\R^N)\). Quindi (si veda \cite[Proposition 3.5(iv)]{brezis2011functional}), 
+	\begin{equation}\label{eq: PS1}
+		\langle \grad E(\gamma_{h_k}), w_k \rangle_{H^1} \to 0. 
+	\end{equation}
+	Osserviamo che
+	\begin{align}\label{eq: PS2}
+		\langle \grad E(\gamma_{h_k}), w_k \rangle_{H^1}  &= \dif E(\gamma_{h_k}) w_k 
+		= \int_0^1 \langle \dot \gamma_{h_k}, \dot w_k \rangle \ \dif t \nonumber \\ 
+		&= \int_0^1 \langle \dot v_k, \dot w_k \rangle \ \dif t + \int_0^1\langle \dot \gamma, \dot w_k \rangle \ \dif t \nonumber\\
+		&= \int_0^1 |\dot v_k |^2 \ \dif t - \int_0^1 \left\langle \dot v_k, \frac{\dif}{\dif t}\pi^\perp_\gamma(v_k) \right\rangle \ \dif t + o(1)
+	\end{align}
+	con \(o(1) \to 0\) quando \(k \to \infty\) e avendo usato che \(\dot w_k \rightharpoonup 0\) in \(L^2\) e che
+	\[
+		\dot w_k = \dot v_k - \frac{\dif}{\dif t}\pi^\perp_\gamma(v_k).
+	\]
+	Fissiamo \(t_0 \in \Sp^1\) e sia \(E_1 , \dots, E_n,E_{n+1}, \dots, E_N\) un frame ortonormale di \(\R^N\) su un intorno di \(\gamma(t_0)\) tale che \(E_1, \dots, E_n\) sia un frame ortonormale di \(M\). Scriviamo 
+	\[
+		v_k = \sum_{i=1}^N v_k^i (E_i)_\gamma.
+	\]
+	Poiché \(v_k \to 0\) in \(C^0\) e in \(L^2\), anche 
+	\[
+	v_k^i = \langle v_k, E_i \rangle_\gamma \to 0 \text{ in } C^0 \text{ e }L^2.
+	\]
+	Inoltre,  
+	\[
+		\dot v_k =  \sum_{i=1}^N \dot v_k^i (E_i )_\gamma + \sum_{i=1}^N v^i_k \frac{\dif}{\dif t} (E_i)_\gamma.
+	\]
+	e quindi, siccome \(\dot v_k \rightharpoonup 0\) in \(L^2\), anche
+	\[
+		\dot v_k^i = \langle \dot v_k, E_i \rangle - \sum_{j=1}^N v^j_k \left\langle \frac{\dif}{\dif t} (E_j)_\gamma , (E_i)_\gamma \right\rangle  \rightharpoonup 0 \text{ in }L^2.
+	\]
+	Osservando che
+	\[
+		\pi^\perp_\gamma (v_k) = \sum_{j=n+1}^N v_k^j (E_j)_\gamma,
+	\]
+	otteniamo che, se \(\gamma(t_0-\ve,t_0+\ve) \) è contenuto nell'intorno su cui è definito il frame, 
+	\begin{align*}
+		\int_{t_0-\ve}^{t_0+\ve} \left \langle \dot v_k, \frac{\dif}{\dif t} \pi^\perp_\gamma(v_k) \right\rangle \ \dif t &= \int_{t_0-\ve}^{t_0+\ve} \left\langle \sum_{i=1}^N \dot v^i_k (E_i)_\gamma + \sum_{i=1}^N v^i_k \frac{\dif}{\dif t} (E_i)_\gamma, \right. \\
+		& \qquad \qquad \left.\sum_{j=n+1}^N \dot v^j_k (E_j)_\gamma + \sum_{j=n+1}^N v^j_k \frac{\dif}{\dif t} (E_j)_\gamma \right\rangle \ \dif t  \\
+		&= 	\int_{t_0-\ve}^{t_0+\ve} \sum_{j=n+1}^N (\dot v^j_k)^2 \ \dif t+ o(1),
+	\end{align*}
+	e, sommando questo risultato su un numero finito di punti di \(\Sp^1\),
+	\begin{equation}\label{eq: PS3}
+			\int_{0}^{1} \left \langle \dot v_k, \frac{\dif}{\dif t} \pi^\perp_\gamma(v_k) \right\rangle \ \dif t  =  \int_0^1 |\pi^\perp_\gamma (\dot v_k)|^2 \ \dif t + o(1).
+	\end{equation}
+	
+	Estendiamo la proiezione normale con la mappa
+	\begin{align*}
+		\pi^\perp : C^0(\Sp^1,M) &\to L(C^0(\Sp^1,\R^N),C^0(\Sp^1,\R^N))\\
+		\sigma &\mapsto \pi^\perp_\sigma,
+	\end{align*}
+	definita da 
+	\[
+		\pi^\perp_\sigma (v(t)) = \pi^\perp_{\sigma(t)}(v(t)) \in N_{v(t)}M \subset \R^N
+	\]
+	per \(v \in C^0(\Sp^1,\R^N)\). Osserviamo che \(\pi^\perp\) è continua, perché l'espressione locale dipende dalle mappe
+	\[
+		\sigma \mapsto (E_i)_\sigma
+	\] 
+	associate a un frame \(E_1, \dots , E_N\), che sono chiaramente continue. Poiché \(\gamma_{h_k} \to \gamma\) in \(C^0\), anche \(\pi^\perp_{\gamma_{h_k}} \to \pi^\perp_\gamma\) in \(L(C^0(\Sp^1,\R^N),C^0(\Sp^1,\R^N))\). Dato che 
+	\[
+		\pi^\perp_\gamma(\dot \gamma) = 0 = \pi^\perp_{\gamma_{h_k}}(\dot \gamma_{h_k}),
+	\]
+	otteniamo
+	\begin{align}\label{eq: PS4}
+		\int_0^1 |\pi^\perp_\gamma (\dot v_k)|^2 \ \dif t &= \int_0^1 |\pi^\perp_\gamma (\dot \gamma_{h_k}- \dot \gamma)|^2 \ \dif t \nonumber \\
+		&= \int_0^1 |(\pi^\perp_\gamma - \pi^\perp_{\gamma_{h_k}})(\dot \gamma_{h_k})|^2 \ \dif t \nonumber \\
+		& \leq \|\pi^\perp_\gamma - \pi^\perp_{\gamma_{h_k}}\|^2_{L(C^0,C^0)} \int_0^1|\dot \gamma_{h_k}|^2 \ \dif t \nonumber \\
+		& \leq c_2 \|\pi^\perp_\gamma - \pi^\perp_{\gamma_{h_k}}\|^2_{L(C^0,C^0)} \to 0.
+	\end{align}
+	
+	Mettendo insieme (\ref{eq: PS1}), (\ref{eq: PS2}), (\ref{eq: PS3}) e (\ref{eq: PS4}) otteniamo che \(\dot v_k \to 0\) in \(L^2\), e quindi \(\gamma_{h_k} \to \gamma\) in \(H^1\).
+\end{proof}
+
+Ripetendo la stessa dimostrazione del Lemma~\ref{lemma: di deformazione} e del Teorema~\ref{teo: MP}, otteniamo il seguente. 
+\begin{teo}\label{teo: MP con energia}
+	Sia \(M\) una varietà chiusa e \(\mathcal{H}\) una famiglia non vuota di sottoinsiemi di \(H^1(\Sp^1,M)\) \(\phi\)-invariante e tale che
+	\begin{equation}\label{eq: MP level}
+		\lambda \coloneq \inf_{H \in \mathcal{H}} \sup_{\gamma \in H} E(\gamma) \in \R.
+	\end{equation}
+	Allora \(\lambda\) è un valore critico, cioè è l'energia di una geodetica chiusa (costante se \(\lambda = 0\)). 
+\end{teo}
+
+
+

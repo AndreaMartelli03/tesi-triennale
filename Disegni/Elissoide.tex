@@ -1,0 +1,25 @@
+
+
+\begin{figure}[h]
+	\begin{tikzpicture}
+		\begin{axis}[
+			view={20}{30}, 
+			axis equal image, % Mantiene la scala 1:1 tra gli assi
+			axis lines=none,
+			width=10cm, % Larghezza del grafico
+			height=10cm % Altezza del grafico
+			]
+			\addplot3[
+			domain=-90:90, 
+			y domain=0:360,
+			variable=\u,
+			variable y=\v,
+			samples=30,
+			surf, 
+			smooth, 
+			colormap/greenyellow
+			]
+			({1.1*cos(u)*cos(v)}, {cos(u)*sin(v)}, {.9*sin(u)});
+		\end{axis}
+	\end{tikzpicture}
+\end{figure}

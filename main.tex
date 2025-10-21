@@ -1,0 +1,144 @@
+\documentclass[italian,12pt,a4paper]{book}
+\usepackage[centering]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc} % Ensure proper encoding
+\usepackage{lmodern} % Use Latin Modern fonts which provide more sizes
+\usepackage{babel}
+
+%----- Math ---------------------------------------------
+\usepackage{amsmath}         
+\usepackage{mathtools}       
+\usepackage{amssymb}   
+\usepackage{amsthm}         
+
+%----- Design ------------------------------------------- 
+\usepackage{lastpage}                              
+\usepackage{enumitem}
+
+%----- Intestazioni ---------------------------------------
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{} % Clear all headers and footers
+\fancyhead[LE,RO]{\nouppercase{\leftmark}} % Header left on even pages, right on odd pages
+\fancyfoot[C]{\thepage} % Footer center, page number
+\setlength{\headheight}{14.5pt}
+
+% Pacchetto titlesec per personalizzare i titoli dei capitoli
+\usepackage{titlesec}
+
+% Comando per settare l'intestazione correttamente per l'introduzione
+\newcommand{\chapterwithintroduction}[1]{
+	\chapter*{#1}
+	\addcontentsline{toc}{chapter}{#1}
+	\markboth{#1}{}
+}
+
+%----- Pacchetti Disegno --------------------------------
+\usepackage{tikz}
+\usepackage{tikz-cd}
+\usepackage{graphicx}
+\usepackage{thmtools}
+\usepackage{xcolor}
+\usepackage[all]{xy}        
+\usetikzlibrary{decorations.markings}
+\usetikzlibrary{hobby}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+
+%----- Symbols -----------------------------------------
+\providecommand{\R}{\mathbb{R}}
+\providecommand{\N}{\mathbb{N}}
+\providecommand{\Z}{\mathbb{Z}}
+\providecommand{\Sp}{\mathbb{S}}
+\providecommand{\D}{\mathbb{D}}
+\providecommand{\E}{\mathbb{E}}
+\providecommand{\F}{\mathbb{F}}
+\providecommand{\T}{\mathcal{T}}
+\providecommand{\de}{\partial}
+\providecommand{\ve}{\varepsilon}
+\providecommand{\vphi}{\varphi}
+\providecommand{\dif}{\mathrm{d}}
+\providecommand{\integral}[3]{\int_{#1} #2 \mathrm{d}#3}
+\providecommand{\id}{\mathrm{id}}
+\providecommand{\sff}{\mathrm{I\!I}}
+\newcommand{\mapsfrom}{\mathrel{\reflectbox{\ensuremath{\mapsto}}}}
+
+%----- MathOperators -----------------------------------
+\DeclareMathOperator{\grad}{grad}
+
+%----- Hyperref ------------------------------------------
+\usepackage{nameref}
+\usepackage{csquotes}
+\usepackage{biblatex}
+\usepackage{hyperref}
+\hypersetup{
+	colorlinks=true,
+	linkcolor=black, % Color for normal internal links
+	filecolor=black, % Color for file links
+	urlcolor=black, % Color for external links
+	citecolor=black, % Color for citations
+	pdftitle={Il teorema di Lusternik-Fet sull'esistenza di geodetiche chiuse},
+	pdfpagemode=FullScreen,
+}
+\addbibresource{BiblioTesi.bib}
+
+% -----Ambienti matematici-------------------------------
+\theoremstyle{plain}
+\newtheorem{teo}{Teorema}[chapter]
+\newtheorem{prop}[teo]{Proposizione}
+\newtheorem{cor}[teo]{Corollario}
+\newtheorem{lemma}[teo]{Lemma}
+\newtheorem*{teoLF}{Teorema~\ref{teo: Lusternik-Fet}}
+\newtheorem*{prop*A}{Proposizione~\ref{prop: esiste f omotopicamente non banale}}
+\newtheorem*{conget}{Congettura}
+\theoremstyle{definition}
+\newtheorem{defi}[teo]{Definizione}
+\theoremstyle{remark}
+\newtheorem{oss}[teo]{Osservazione}
+\newtheorem{es}[teo]{Esempio}
+
+\numberwithin{figure}{chapter}
+
+\setcounter{tocdepth}{1}
+
+% Definizione di un nuovo driver per nascondere URL e DOI
+\AtEveryBibitem{%
+	\clearfield{url} % Nasconde l'URL
+	\clearfield{doi} % Nasconde il DOI
+	\clearfield{isbn} % Nasconde ISBN
+	\clearfield{issn} % Nasconde ISSN
+	\clearfield{note} % Nasconde le note
+}
+
+\title{Il teorema di Lusternik-Fet sull'esistenza di geodetiche chiuse}
+\author{Andrea Martelli}
+\begin{document}
+	
+	\input{frontespizio.tex}
+	
+	\input{DedicaRingraziamenti.tex}
+	
+	\tableofcontents
+	
+	\chapterwithintroduction{Introduzione}
+	\input{Intro2.tex}
+	
+	\chapter{Geodetiche su varietà Riemanniane}
+	\input{TesiCap1.tex}
+	
+	\chapter{Lo spazio \texorpdfstring{$H^1(\Sp^1,M)$}{H1(S1,M)} e il funzionale energia}
+	\input{TesiCap2.tex}
+	
+	\chapter{Il teorema di passo montano}
+	\input{TesiCap3.tex}
+	
+	\chapter{Il teorema di Lusternik-Fet}
+	\input{TesiCap4.tex}
+	
+	\appendix
+	\chapter{Gruppi di omotopia} \label{appendice}
+	\input{TesiApp.tex}
+	
+	\printbibliography
+	\addcontentsline{toc}{chapter}{Bibliografia}
+\end{document}
