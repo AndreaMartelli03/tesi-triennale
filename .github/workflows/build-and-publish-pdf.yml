@@ -1,0 +1,36 @@
+name: Build and publish PDF
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  build-and-publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Install TeX Live (minimal set)
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends \
+            texlive-latex-extra \
+            texlive-fonts-recommended \
+            texlive-lang-italian \
+            latexmk \
+            biber
+
+      - name: Build PDF with latexmk
+        # Adjust "tesi.tex" below to the name of your main .tex file (e.g. main.tex)
+        run: |
+          mkdir -p out
+          latexmk -pdf -interaction=nonstopmode -halt-on-error -outdir=out tesi.tex
+
+      - name: Publish generated PDF to GitHub Pages (gh-pages)
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./out
+          publish_branch: gh-pages
+          # If you prefer to publish to 'docs/' on main instead, use a different approach.
