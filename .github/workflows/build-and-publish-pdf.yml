@@ -1,4 +1,4 @@
-name: Build and publish PDF
+name: Build and publish PDF (diagnostics)
 
 on:
   push:
@@ -11,6 +11,15 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+
+      - name: Environment info (for debugging)
+        run: |
+          echo "==== uname ===="
+          uname -a
+          echo "==== lsb_release ===="
+          lsb_release -a || true
+          echo "==== Disk space ===="
+          df -h
 
       - name: Install TeX Live (common packages) and biber
         run: |
@@ -25,18 +34,23 @@ jobs:
             fonts-lmodern \
             cm-super
 
-      - name: Build PDF with latexmk
+      - name: Build PDF and capture logs
         id: build
+        shell: bash
         run: |
-          # adjust "tesi.tex" below if your main file is named differently
+          set -o pipefail
           mkdir -p out
-          latexmk -pdf -interaction=nonstopmode -halt-on-error -outdir=out main.tex
-
-      - name: List out/ for debugging
-        if: always()
-        run: |
+          BUILD_LOG=build.log
+          echo "Starting latexmk build (output also written to $BUILD_LOG)"
+          # run latexmk, tee stdout/stderr to build.log
+          latexmk -pdf -interaction=nonstopmode -halt-on-error -outdir=out tesi.tex 2>&1 | tee -a "$BUILD_LOG"
+          LATEXMK_EXIT=${PIPESTATUS[0]:-1}
+          echo "latexmk exit code: $LATEXMK_EXIT"
+          echo "$LATEXMK_EXIT" > latexmk-exit-code.txt
           echo "Contents of out/:"
           ls -lah out || true
+          echo "----- tail of $BUILD_LOG -----"
+          tail -n 200 "$BUILD_LOG" || true
 
       - name: Upload build artifacts and logs (always)
         if: always()
@@ -45,6 +59,8 @@ jobs:
           name: latex-output
           path: |
             out/**
+            build.log
+            latexmk-exit-code.txt
             *.log
             *.aux
             *.blg
