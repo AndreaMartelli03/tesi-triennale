@@ -34,6 +34,9 @@ jobs:
             fonts-lmodern \
             cm-super
 
+      - name: Install fonts for LaTeX
+        run: sudo apt-get install -y texlive-fonts-recommended
+
       - name: Build PDF and capture logs
         id: build
         shell: bash
