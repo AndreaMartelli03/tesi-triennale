@@ -3,34 +3,59 @@ name: Build and publish PDF
 on:
   push:
     branches: [ main ]
+  workflow_dispatch:
 
 jobs:
-  build-and-publish:
+  build:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
-      - name: Install TeX Live (minimal set)
+      - name: Install TeX Live (common packages) and biber
         run: |
           sudo apt-get update
           sudo apt-get install -y --no-install-recommends \
             texlive-latex-extra \
             texlive-fonts-recommended \
             texlive-lang-italian \
+            texlive-pictures \
             latexmk \
-            biber
+            biber \
+            fonts-lmodern \
+            cm-super
 
       - name: Build PDF with latexmk
-        # Adjust "tesi.tex" below to the name of your main .tex file (e.g. main.tex)
+        id: build
         run: |
+          # adjust "tesi.tex" below if your main file is named differently
           mkdir -p out
           latexmk -pdf -interaction=nonstopmode -halt-on-error -outdir=out main.tex
 
-      - name: Publish generated PDF to GitHub Pages (gh-pages)
+      - name: List out/ for debugging
+        if: always()
+        run: |
+          echo "Contents of out/:"
+          ls -lah out || true
+
+      - name: Upload build artifacts and logs (always)
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: latex-output
+          path: |
+            out/**
+            *.log
+            *.aux
+            *.blg
+            *.bbl
+            *.fdb_latexmk
+            *.fls
+
+      - name: Publish generated PDF to GitHub Pages (gh-pages) (only on success)
+        if: success()
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./out
           publish_branch: gh-pages
-          # If you prefer to publish to 'docs/' on main instead, use a different approach.
