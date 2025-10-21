@@ -25,7 +25,7 @@ jobs:
         # Adjust "tesi.tex" below to the name of your main .tex file (e.g. main.tex)
         run: |
           mkdir -p out
-          latexmk -pdf -interaction=nonstopmode -halt-on-error -outdir=out tesi.tex
+          latexmk -pdf -interaction=nonstopmode -halt-on-error -outdir=out main.tex
 
       - name: Publish generated PDF to GitHub Pages (gh-pages)
         uses: peaceiris/actions-gh-pages@v3
