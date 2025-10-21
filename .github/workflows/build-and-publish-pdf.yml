@@ -43,7 +43,7 @@ jobs:
           BUILD_LOG=build.log
           echo "Starting latexmk build (output also written to $BUILD_LOG)"
           # run latexmk, tee stdout/stderr to build.log
-          latexmk -pdf -interaction=nonstopmode -halt-on-error -outdir=out tesi.tex 2>&1 | tee -a "$BUILD_LOG"
+          latexmk -pdf -interaction=nonstopmode -halt-on-error -outdir=out main.tex 2>&1 | tee -a "$BUILD_LOG"
           LATEXMK_EXIT=${PIPESTATUS[0]:-1}
           echo "latexmk exit code: $LATEXMK_EXIT"
           echo "$LATEXMK_EXIT" > latexmk-exit-code.txt
